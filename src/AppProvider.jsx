@@ -1,11 +1,9 @@
-import './App.css';
-import Home from './pages/Home/Home';
-//import Cadastro from './pages/Cadastro/Cadastro';
+import Routes from "./routes";
 
 function App() {
   return (
     <div>
-      <Home />
+      <Routes></Routes>
     </div>
   );
 }
