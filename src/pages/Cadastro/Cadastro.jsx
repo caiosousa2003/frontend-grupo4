@@ -1,6 +1,6 @@
 import { DivPrincipal, HeaderPrincipal, TituloCadastro, ButtonDefault, InputDefault, ReturnHeader, LogoHeader} from "./styleCadastro"
-import logo from ""
-import x from "./assets/Return.png"
+import LogoCadastro from "../../assets/LogoCadastro.png"
+import ReturnCadastro from "../../assets/ReturnCadastro.png"
 
 function Cadastro() {
 
@@ -9,8 +9,8 @@ function Cadastro() {
       backgroundColor: 'black', 
     }}>
         <HeaderPrincipal>
-          <LogoHeader src={logo} alt="logo"></LogoHeader>
-          <ReturnHeader src={x} alt="logo"></ReturnHeader>
+          <LogoHeader src={LogoCadastro} alt="logo"></LogoHeader>
+          <ReturnHeader src={ReturnCadastro} alt="logo"></ReturnHeader>
         </HeaderPrincipal>
       <DivPrincipal>
       <TituloCadastro>CADASTRO</TituloCadastro>
