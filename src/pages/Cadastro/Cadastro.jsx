@@ -1,14 +1,10 @@
 import {
   DivPrincipal,
-  HeaderPrincipal,
   TituloCadastro,
   ButtonDefault,
   InputDefault,
-  ReturnHeader,
-  LogoHeader,
 } from './styleCadastro';
-import logo from '../../assets/LogoCadastro.png';
-import x from '../../assets/ReturnCadastro.png';
+import Header from '../../components/header/header';
 
 function Cadastro() {
   return (
@@ -17,10 +13,7 @@ function Cadastro() {
         backgroundColor: 'black',
       }}
     >
-      <HeaderPrincipal>
-        <LogoHeader src={logo} alt="logo"></LogoHeader>
-        <ReturnHeader src={x} alt="logo"></ReturnHeader>
-      </HeaderPrincipal>
+      <Header cadastro={true}></Header>
       <DivPrincipal>
         <TituloCadastro>CADASTRO</TituloCadastro>
         <InputDefault placeholder="E-mail"></InputDefault>
