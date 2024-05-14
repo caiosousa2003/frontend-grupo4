@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { LogoHeader, HeaderPrincipal, ReturnHeader } from './styleHeader';
 import logo from '../../assets/LogoCadastro.png';
 import x from '../../assets/ReturnCadastro.png';

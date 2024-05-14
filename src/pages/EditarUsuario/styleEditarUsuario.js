@@ -1,90 +1,77 @@
 import { styled } from 'styled-components';
 
-export const DivEditar = styled.div`
-    height:60%;
-    margin-top: 3%;
-    margin-bottom: 7%; 
-    justify-content:center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color:#FFE712;
-    font-size: 220%;
-    text-align: center;
+export const TituloEditar = styled.h1`
+  color: #ffe712;
+  font-size: 48px;
+  font-family: Arial;
+  margin-botton: 40px;
 `;
 
 export const ContainerPadrao = styled.div`
-  display:flex;
+  width: 80%;
+  height: 50px;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-left: 32%;
-  margin-right: 32%;
+  margin: 10px 0px;
 `;
 
 export const InputPadrao = styled.input`
   width: 80%;
-  border:solid;
-  border-color:#FFE712;
+  border: solid;
+  border-color: #ffe712;
   border-radius: 10px;
-  height:30px;
-  margin-bottom: 1%; 
-  margin-left: 2%;
-  margin-right: 2%;
-  margin-top: 20px;
-`;
-
-export const InputStatus = styled.input`
-  width: 80%;
-  border:solid;
-  border-color:#FFE712;
-  border-radius: 10px;
-  height:60px;
-  margin-bottom: 1%; 
-  margin-left: 2%;
-  margin-right: 2%;
-  margin-top: 20px;
+  height: 30px;
 `;
 
 export const QuadradoCinza = styled.div`
-  position: absolute;
-  top: 100px;
-  left: 20%; 
-  width: 38%;
-  height: 29%;
-  margin-left: 10%;
-  margin-top: 11%;
-  margin-bottom: 2%;
-  background-color: rgb(59, 59, 59); 
+  background-color: #313131;
+  width: 40%;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-radius: 10px;
-  z-index: -1; 
+  justify-content: center;
+  @media (max-width: 900px) {
+    width: 80%;
+  }
 `;
 
 export const TextoPadrao = styled.p`
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: #FFE712;
-  margin-bottom: 10px; 
+  color: #ffe712;
+  margin-bottom: 10px;
+  padding: 5px;
 `;
 
 export const Botao = styled.div`
-  display:flex;
+  display: flex;
   justify-content: center;
-  margin-top: 15%;
+  align-items: center;
 `;
 
 export const BotaoPadrao = styled.button`
-  width: 15%;
-  height: 10%;
-  border: solid;
+  width: auto%;
+  height: auto;
+  border: solid 2px yellow;
   border-radius: 15px;
-  background-color: #FFE712;
-  color:black;
-  font-family: fantasy;
-  font-size: 200%;
-  margin-right: 5%;
-  margin-top: 20px;
+  background-color: black;
+  color: yellow;
+  font-family: Arial;
+  font-size: 24px;
+  margin: 20px;
+  cursor: pointer;
 `;
 
 export const DivPrincipal = styled.div`
-  background-color:#000; 
-  margin: 0; 
-  padding: 0;
+  background-color: #000;
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 `;
