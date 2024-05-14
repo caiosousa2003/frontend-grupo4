@@ -1,4 +1,4 @@
-import { styled } from 'styled-components';
+import { styled } from "styled-components";
 
 export const DivPrincipal = styled.div`
   display: flex;
@@ -13,40 +13,4 @@ export const DivPrincipal = styled.div`
 export const TituloCadastro = styled.h1`
   color: yellow;
   font-size: 48px;
-`;
-export const InputDefault = styled.input`
-  border-radius: 50px;
-  margin-top: 35px;
-  padding-left: 15px;
-  width: 44%;
-  height: 50px;
-  border: none;
-  font-size: 20px;
-  @media screen and (max-width: 620px) {
-    width: 273px;
-  }
-  @media screen and (max-width: 300px) {
-    width: 250px;
-  }
-  &:focus {
-    outline: none;
-    border: 3px solid yellow;
-  }
-`;
-export const ButtonDefault = styled.button`
-  border-radius: 15px;
-  width: 300px;
-  height: 50px;
-  margin-top: 60px;
-  background-color: yellow;
-  font-size: 32px;
-  color: black;
-  border: none;
-  cursor: pointer;
-  @media screen and (max-width: 620px) {
-    width: 273px;
-  }
-  &:hover {
-    opacity: 0.9;
-  }
 `;

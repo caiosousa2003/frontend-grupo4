@@ -1,16 +1,13 @@
-import {
-  DivPrincipal,
-  TituloCadastro,
-  ButtonDefault,
-  InputDefault,
-} from './styleCadastro';
-import Header from '../../components/header/header';
+import { DivPrincipal, TituloCadastro } from "./styleCadastro";
+import Header from "../../components/header/header";
+import { ButtonDefault } from "../../components/commom/ButtonDefault";
+import { InputDefault } from "../../components/commom/InputDefault";
 
 function Cadastro() {
   return (
     <div
       style={{
-        backgroundColor: 'black',
+        backgroundColor: "black",
       }}
     >
       <Header cadastro={true}></Header>

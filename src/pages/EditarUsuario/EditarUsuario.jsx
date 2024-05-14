@@ -7,8 +7,10 @@ import {
   Botao,
   BotaoPadrao,
   DivPrincipal,
-} from './styleEditarUsuario';
-import Header from '../../components/header/header';
+} from "./styleEditarUsuario";
+import Header from "../../components/header/header";
+import { InputDefault } from "../../components/commom/InputDefault";
+import { ButtonDefaultBlack } from "../../components/commom/ButtonDefaultBlack";
 
 function EditarUsuario() {
   return (
@@ -19,16 +21,24 @@ function EditarUsuario() {
         <QuadradoCinza>
           <ContainerPadrao>
             <TextoPadrao>Nome:</TextoPadrao>
-            <InputPadrao></InputPadrao>
+            <InputDefault
+              width="80%"
+              height="30px"
+              margintop="0px"
+            ></InputDefault>
           </ContainerPadrao>
           <ContainerPadrao>
             <TextoPadrao>Cargo:</TextoPadrao>
-            <InputPadrao></InputPadrao>
+            <InputDefault
+              width="80%"
+              height="30px"
+              margintop="0px"
+            ></InputDefault>
           </ContainerPadrao>
         </QuadradoCinza>
         <Botao>
-          <BotaoPadrao>CANCELAR</BotaoPadrao>
-          <BotaoPadrao>SALVAR</BotaoPadrao>
+          <ButtonDefaultBlack>CANCELAR</ButtonDefaultBlack>
+          <ButtonDefaultBlack>SALVAR</ButtonDefaultBlack>
         </Botao>
       </DivPrincipal>
     </div>
