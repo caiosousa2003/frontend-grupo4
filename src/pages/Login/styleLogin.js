@@ -11,3 +11,14 @@ export const TextClicavel = styled.a`
   text-decoration: underline;
   cursor: pointer;
 `;
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 90%;
+  @media screen and (max-width: 400px) {
+    height: 92vh;
+  }
+`

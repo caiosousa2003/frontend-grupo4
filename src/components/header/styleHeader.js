@@ -8,7 +8,7 @@ export const LogoHeader = styled.img`
 
 export const HeaderPrincipal = styled.header`
   background-color: yellow;
-  height: 10vh;
+  height: 100%;
   display: flex;
   align-items: center;
   @media screen and (max-width: 400px) {
