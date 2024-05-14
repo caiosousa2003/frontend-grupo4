@@ -13,4 +13,5 @@ export const DivPrincipal = styled.div`
 export const TituloCadastro = styled.h1`
   color: yellow;
   font-size: 48px;
+  font-weight: bold;
 `;
