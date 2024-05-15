@@ -1,8 +1,7 @@
 import Header from "../../components/header/header";
 import { ButtonDefault } from "../../components/commom/ButtonDefault";
 import { InputDefault } from "../../components/commom/InputDefault";
-import { DivPrincipal, TituloCadastro } from "../Cadastro/styleCadastro";
-import { TextCadastro, TextClicavel, Form } from "./styleLogin";
+import { Titulo, DivPrincipal, TextCadastro, TextClicavel, Form } from "./styleLogin";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
@@ -20,7 +19,7 @@ function Login() {
         <div>
         <Header/>
         <DivPrincipal>
-            <TituloCadastro>LOGIN</TituloCadastro>
+            <Titulo>LOGIN</Titulo>
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <InputDefault name="email" placeholder="E-mail" errors={errors} {...register("email")}></InputDefault>
                 <InputDefault name="senha" placeholder="Senha" errors={errors} {...register("senha")}></InputDefault>

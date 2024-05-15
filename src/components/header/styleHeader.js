@@ -18,6 +18,7 @@ export const HeaderPrincipal = styled.header`
 
 export const ReturnHeader = styled.img`
   margin-left: auto;
+  cursor: pointer;
   @media screen and (max-width: 524px) {
     width: 20%;
   }

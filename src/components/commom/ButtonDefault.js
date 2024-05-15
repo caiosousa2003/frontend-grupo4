@@ -13,6 +13,9 @@ export const ButtonDefault = styled.button`
   @media screen and (max-width: 620px) {
     width: 273px;
   }
+  @media screen and (max-width: 450px) {
+    width: 200px;
+  }
   &:hover {
     opacity: 0.9;
   }
