@@ -22,7 +22,7 @@ function Login() {
             <Titulo>LOGIN</Titulo>
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <InputDefault name="email" placeholder="E-mail" errors={errors} {...register("email")}></InputDefault>
-                <InputDefault name="senha" placeholder="Senha" errors={errors} {...register("senha")}></InputDefault>
+                <InputDefault name="senha" type="password" placeholder="Senha" errors={errors} {...register("senha")}></InputDefault>
                 <TextCadastro>Não tem login? Faça seu cadastro <TextClicavel onClick={()=>navigate("/cadastro")}>aqui</TextClicavel></TextCadastro>
                 <ButtonDefault><b>ENTRAR</b></ButtonDefault>
             </Form>
