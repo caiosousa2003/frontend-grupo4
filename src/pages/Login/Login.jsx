@@ -4,15 +4,31 @@ import { InputDefault } from "../../components/commom/InputDefault";
 import { Titulo, DivPrincipal, TextCadastro, TextClicavel, Form } from "./styleLogin";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-
+import { useLoginUsuario } from "../../hooks/query/Login";
+import { validador } from "./utils";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useQueryClient } from "@tanstack/react-query";
 
 function Login() {
     
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm({ resolver: zodResolver(validador) });
     const navigate = useNavigate();
+    
+    const queryClient = useQueryClient();
+    const { mutate: loginUsuario } = useLoginUsuario({
+        onSuccess: () => {
+            queryClient.invalidateQueries({
+                queryKey: ['login'],
+            });
+        },
+        onError: (err) => {
+            console.log(err);
+        },
+    });
+
     const onSubmit = (data) => {
-        navigate("/");
-        alert(`Login com email: ${data.email} e senha: ${data.senha} realizado`);
+        console.log("LOGADO");
+        loginUsuario(data);
     };
 
     return (
