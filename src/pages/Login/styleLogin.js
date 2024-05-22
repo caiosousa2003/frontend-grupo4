@@ -46,5 +46,5 @@ export const Form = styled.form`
 `
 
 export const Alert = styled.p`
-  color: white;
+  color: red;
 `

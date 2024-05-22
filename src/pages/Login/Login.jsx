@@ -8,7 +8,7 @@ import { useLoginUsuario } from "../../hooks/query/Login";
 import { validador } from "./utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useQueryClient } from "@tanstack/react-query";
-import { useState } from "react";
+import useAuthStore from "../../Stores/auth";
 
 function Login() {
     
@@ -16,25 +16,23 @@ function Login() {
     const navigate = useNavigate();
     
     const queryClient = useQueryClient();
-    const [backError, setBackError] = useState();
+    const setToken = useAuthStore((state) => state.setToken);
+
     const { mutate: loginUsuario } = useLoginUsuario({
         onSuccess: (data) => {
             queryClient.invalidateQueries({
                 queryKey: ['login'],
             });
-            console.log(data);
-            console.log("LOGADO");
+            setToken(data.token);
             navigate('/');
         },
         onError: (err) => {
-            setBackError(err);
-            console.log(err.response.data.message);
+            alert(err.response.data.message);
         },
     });
 
     const onSubmit = (data) => {
         console.log(data);
-        setBackError();
         loginUsuario(data);
     };
 
@@ -49,7 +47,6 @@ function Login() {
                 <InputDefault name="senha" type="password" placeholder="Senha" error={errors} {...register("senha")}></InputDefault>
                 {!!errors?.senha?.message && <Alert>{errors?.senha?.message}</Alert>}
                 <TextCadastro>Não tem login? Faça seu cadastro <TextClicavel onClick={()=>navigate("/cadastro")}>aqui</TextClicavel></TextCadastro>
-                {!!backError && <Alert>{backError.response.data.message}</Alert>}
                 <ButtonDefault><b>ENTRAR</b></ButtonDefault>
             </Form>
         </DivPrincipal>
