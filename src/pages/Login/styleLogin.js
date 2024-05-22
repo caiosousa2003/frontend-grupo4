@@ -44,3 +44,7 @@ export const Form = styled.form`
     height: 92vh;
   }
 `
+
+export const Alert = styled.p`
+  color: white;
+`
