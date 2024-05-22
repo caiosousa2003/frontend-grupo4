@@ -6,7 +6,7 @@ export const InputDefault = styled.input`
   padding-left: 15px;
   width: ${(props) => props.width || "44%"};
   height: ${(props) => props.height || "50px"};
-  border: none;
+  border: ${(props) => (props?.borda ? "2px solid red" : "none")};
   font-size: 20px;
   @media screen and (max-width: 620px) {
     width: 273px;

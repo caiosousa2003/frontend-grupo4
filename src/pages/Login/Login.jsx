@@ -42,12 +42,12 @@ function Login() {
         <DivPrincipal>
             <Titulo>LOGIN</Titulo>
             <Form onSubmit={handleSubmit(onSubmit)}>
-                <InputDefault name="email" placeholder="E-mail" error={errors} {...register("email")}></InputDefault>
+                <InputDefault name="email" placeholder="E-mail" error={errors} borda ={!!errors?.email?.message} {...register("email")}></InputDefault>
                 {!!errors?.email?.message && <Alert>{errors?.email?.message}</Alert>}
-                <InputDefault name="senha" type="password" placeholder="Senha" error={errors} {...register("senha")}></InputDefault>
+                <InputDefault margintop="30px" name="senha" type="password" placeholder="Senha" error={errors} borda ={!!errors?.senha?.message} {...register("senha")}></InputDefault>
                 {!!errors?.senha?.message && <Alert>{errors?.senha?.message}</Alert>}
                 <TextCadastro>Não tem login? Faça seu cadastro <TextClicavel onClick={()=>navigate("/cadastro")}>aqui</TextClicavel></TextCadastro>
-                <ButtonDefault><b>ENTRAR</b></ButtonDefault>
+                <ButtonDefault marginTop="40px"><b>ENTRAR</b></ButtonDefault>
             </Form>
         </DivPrincipal>
         </div>
