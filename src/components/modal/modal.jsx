@@ -1,38 +1,38 @@
-import React, { children } from "react";
-import { CloseBtn } from "./styleModal";
-import { IoMdClose } from "react-icons/io";
+import { Modal } from "antd";
+import { InputDefault } from "../commom/InputDefault";
+import {
+  ModalStyle,
+  ModalBtn,
+  GlobalDiv,
+  ModalTlt,
+  InputTlt,
+  InputModal,
+} from "./styleModal";
 
-function Modal({ isOpen, setOpenModal, children }) {
+export default function modal({ isModalOpen, setIsModalOpen }) {
   const handleOk = () => {
-    setOpenModal(false);
+    setIsModalOpen(false);
   };
   const handleCancel = () => {
-    setOpenModal(false);
+    setIsModalOpen(false);
   };
   return (
-    <Modal
-      title="Basic Modal"
-      open={isOpen}
-      onOk={handleOk}
-      onCancel={handleCancel}
-    >
-      <p>Some contents...</p>
-      <p>Some contents...</p>
-      <p>Some contents...</p>
-    </Modal>
+    <>
+      <ModalStyle
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        footer={null}
+      >
+        <GlobalDiv>
+          <ModalTlt>Iniciar sessão</ModalTlt>
+          <div>
+            <InputTlt>Digite o projeto</InputTlt>
+            <InputModal placeholder="Nome"></InputModal>
+          </div>
+          <ModalBtn>SALVAR</ModalBtn>
+        </GlobalDiv>
+      </ModalStyle>
+    </>
   );
-}
-export default Modal;
-{
-  /* <DivBackground>
-          <DivModal>
-            {children}
-            <HeaderModal>
-              <CloseBtn>
-                <IoMdClose onClick={setModalOpen} />
-              </CloseBtn>
-              <Title>Confirmação de login</Title>
-            </HeaderModal>
-          </DivModal>
-        </DivBackground> */
 }

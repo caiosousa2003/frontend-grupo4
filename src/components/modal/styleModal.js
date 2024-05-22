@@ -1,37 +1,87 @@
+import { Modal } from "antd";
 import { styled } from "styled-components";
 
-export const DivBackground = styled.div`
-  width: 100vw;
-  height: 100vh;
-  background-color: rgb(0, 0, 0, 0.7);
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  z-index: 1000;
-`;
+export const ModalStyle = styled(Modal)`
+  .ant-modal-content {
+    @media screen and (max-width: 578px) {
+      width: 80%;
+    }
+    @media screen and (max-width: 420px) {
+      width: 80%;
+    }
+    @media screen and (max-width: 340px) {
+      width: 70%;
+    }
+    @media screen and (max-width: 300px) {
+      width: 60%;
+    }
+  }
 
-export const DivModal = styled.div`
-  width: 500px;
-  height: 500px;
-  background-color: #111;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  .ant-modal-close {
+    color: black;
+    &:hover {
+      color: black;
+      background: transparent;
+    }
+  }
 `;
-export const CloseBtn = styled.div`
-  font-style: normal;
-  line-height: 40px;
-  text-align: center;
-  color: white;
+export const ModalBtn = styled.button`
+  width: 200px;
+  font-size: 18px;
+  height: 30px;
+  background: transparent;
+  border-radius: 12px;
+  color: #fdd100;
+  white-space: nowrap;
+  margin-top: 20px;
+  border: 1px solid #fdd100;
   cursor: pointer;
-  float: right;
+
+  @media screen and (max-width: 450px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 300px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 300px) {
+    width: 50%;
+    font-size: 12px;
+  }
 `;
-export const Title = styled.h1`
-  font-size: 14px;
-  color: white;
-  padding-left: 1 0px;
+export const GlobalDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
-export const HeaderModal = styled.header`
-  padding: 10px 24px;
-  color: hsla(0, 0%, 100%, 0.85);
-  background: #1f1f1f;
-  border-bottom: 1px solid #0f00;
+export const ModalTlt = styled.h1`
+  color: black;
+  font-weight: 10px;
+  white-space: nowrap;
+  @media screen and (max-width: 300px) {
+    font-size: 15px;
+  }
+`;
+export const InputTlt = styled.h1`
+  color: black;
+  font-size: 10px;
+  margin: 0; /* Remove as margens */
+  padding: 0; /* Remove qualquer padding */
+  display: block;
+`;
+export const InputModal = styled.input`
+  font-size: 12px;
+  width: 250px;
+  height: 30px;
+  padding-left: 10px;
+  border-radius: 5px;
+  @media screen and (max-width: 450px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 300px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 300px) {
+    width: 70%;
+  }
 `;
