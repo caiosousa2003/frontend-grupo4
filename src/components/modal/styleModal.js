@@ -37,9 +37,6 @@ export const ModalBtn = styled.button`
   border: 1px solid #fdd100;
   cursor: pointer;
 
-  @media screen and (max-width: 450px) {
-    width: 100%;
-  }
   @media screen and (max-width: 300px) {
     width: 80%;
   }
