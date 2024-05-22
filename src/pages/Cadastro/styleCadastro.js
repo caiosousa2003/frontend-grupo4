@@ -7,6 +7,8 @@ export const DivPrincipal = styled.div`
   height: 90vh;
   @media screen and (max-width: 400px) {
     height: 92vh;
+    
+    
   }
 `;
 

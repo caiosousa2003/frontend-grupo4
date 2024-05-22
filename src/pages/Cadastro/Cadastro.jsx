@@ -3,13 +3,10 @@ import Header from "../../components/header/header";
 import { ButtonDefault } from "../../components/commom/ButtonDefault";
 import { InputDefault } from "../../components/commom/InputDefault";
 
+
 function Cadastro() {
   return (
-    <div
-      style={{
-        backgroundColor: "black",
-      }}
-    >
+    <div style={{ backgroundColor: "black" }}>
       <Header cadastro={true}></Header>
       <DivPrincipal>
         <TituloCadastro>CADASTRO</TituloCadastro>

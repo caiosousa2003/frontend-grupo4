@@ -4,10 +4,9 @@ import GlobalStyles from "./styles/globalSytles";
 function App() {
   return (
     <div>
-      <GlobalStyles/>
+      <GlobalStyles />
       <Routes></Routes>
     </div>
   );
 }
-
 export default App;
