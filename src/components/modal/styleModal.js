@@ -1,21 +1,37 @@
 import { styled } from "styled-components";
 
 export const DivBackground = styled.div`
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  right: 0px;
-  color: white;
-  zindex: 1000;
+  width: 100vw;
+  height: 100vh;
   background-color: rgb(0, 0, 0, 0.7);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
 `;
 
 export const DivModal = styled.div`
-  position: fixed;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 300px;
+  width: 500px;
+  height: 500px;
   background-color: #111;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+`;
+export const CloseBtn = styled.div`
+  font-style: normal;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  float: right;
+`;
+export const Title = styled.h1`
+  font-size: 14px;
+  color: white;
+  padding-left: 1 0px;
+`;
+export const HeaderModal = styled.header`
+  padding: 10px 24px;
+  color: hsla(0, 0%, 100%, 0.85);
+  background: #1f1f1f;
+  border-bottom: 1px solid #0f00;
 `;
