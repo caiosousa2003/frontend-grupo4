@@ -1,3 +1,4 @@
+import { ConfigProvider } from "antd";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./AppProvider";
@@ -15,10 +16,16 @@ const queryClient = new QueryClient({
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+<<<<<<< HEAD
     <QueryClientProvider client={queryClient}>
       <App />
       <ReactQueryDevtools/>
     </QueryClientProvider>
+=======
+    <ConfigProvider>
+      <App/>
+    </ConfigProvider>
+>>>>>>> ModalDefault
   </React.StrictMode>
 );
 

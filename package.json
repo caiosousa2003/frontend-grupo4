@@ -10,19 +10,33 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@hookform/resolvers": "^3.4.2",
     "@tanstack/react-query": "^5.37.1",
     "@tanstack/react-query-devtools": "^5.37.1",
     "axios": "^1.7.1",
     "jwt-decode": "^4.0.0",
+=======
+    "@hookform/resolvers": "^3.3.4",
+    "@tanstack/react-query": "^5.36.0",
+    "antd": "^5.17.3",
+    "axios": "^1.6.8",
+>>>>>>> ModalDefault
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.51.4",
+    "react-icon": "^1.0.0",
     "react-icons": "^5.2.1",
     "react-router-dom": "^6.23.1",
+<<<<<<< HEAD
     "styled-components": "^6.1.11",
     "zod": "^3.23.8",
     "zustand": "^4.5.2"
+=======
+    "style-components": "^0.1.0",
+    "styled-components": "^6.1.11",
+    "zod": "^3.23.8"
+>>>>>>> ModalDefault
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
