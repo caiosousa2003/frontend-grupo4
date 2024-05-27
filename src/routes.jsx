@@ -10,6 +10,7 @@ import Cadastro from "./pages/Cadastro/Cadastro";
 import Home from "./pages/Home/Home";
 import EditarUsuario from "./pages/EditarUsuario/EditarUsuario";
 import Login from "./pages/Login/Login";
+import EditarProjetos from "./pages/EditarProjetos/EditarProjetos";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +19,7 @@ const router = createBrowserRouter(
       <Route path="login" element={<Login/>}/>
       <Route path="/" element={<Home />} />
       <Route path="editar-usuario" element={<EditarUsuario/>}/>
+      <Route path="editar-projetos" element={<EditarProjetos/>}/>
     </Route>
   )
 );

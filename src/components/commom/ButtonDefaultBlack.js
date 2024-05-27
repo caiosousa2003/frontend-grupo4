@@ -4,7 +4,7 @@ export const ButtonDefaultBlack = styled.button`
   width: auto;
   height: auto;
   border: solid 2px yellow;
-  border-radius: 15px;
+  border-radius: 7px;
   background-color: black;
   color: yellow;
   font-family: Arial;

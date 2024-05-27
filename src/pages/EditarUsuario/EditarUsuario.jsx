@@ -1,11 +1,9 @@
 import {
   TituloEditar,
   ContainerPadrao,
-  InputPadrao,
   TextoPadrao,
   QuadradoCinza,
   Botao,
-  BotaoPadrao,
   DivPrincipal,
 } from "./styleEditarUsuario";
 import Header from "../../components/header/header";

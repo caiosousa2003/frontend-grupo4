@@ -4,7 +4,7 @@ export const TituloEditar = styled.h1`
   color: #ffe712;
   font-size: 48px;
   font-family: Arial;
-  margin-botton: 40px;
+  margin-bottom: 40px;
 `;
 
 export const ContainerPadrao = styled.div`
@@ -53,7 +53,7 @@ export const Botao = styled.div`
 `;
 
 export const BotaoPadrao = styled.button`
-  width: auto%;
+  width: auto;
   height: auto;
   border: solid 2px yellow;
   border-radius: 15px;
