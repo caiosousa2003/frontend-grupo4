@@ -12,6 +12,7 @@ import {
 import { FaTrashAlt } from "react-icons/fa";
 import { useQueryClient } from "@tanstack/react-query";
 import useAuthStore from "../../Stores/auth";
+import FooterPrincipal from "../../components/footer/footer";
 
 function Home() {
   const { data: sessoes } = useGetSessoes({
@@ -56,6 +57,7 @@ function Home() {
           </Line>
         ))}
       </Container>
+      <FooterPrincipal />
     </div>
   );
 }
