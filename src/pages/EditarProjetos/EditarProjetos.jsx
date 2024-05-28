@@ -28,7 +28,12 @@ function EditarProjetos() {
     });
 
     const onSubmit = (data) => {
-        updateProjeto(data);
+        console.log(data)
+        //updateProjeto(data);
+    };
+
+    const onCancel = () => {
+        navigate('/');
     };
 
 
@@ -53,8 +58,8 @@ return (
                 </Campo>
             </ContainerForm>
             <ContainerButtons>
-                <ButtonDefaultBlack font="16px" margin="15px">CANCELAR</ButtonDefaultBlack>
-                <ButtonDefaultBlack type="submit" font="16px" margin="15px">SALVAR</ButtonDefaultBlack>
+                <ButtonDefaultBlack onClick={handleSubmit(onCancel)} font="16px" margin="15px">CANCELAR</ButtonDefaultBlack>
+                <ButtonDefaultBlack onClick={handleSubmit(onSubmit)} font="16px" margin="15px">SALVAR</ButtonDefaultBlack>
             </ContainerButtons>
         </Form>
     </ContainerPrincipal>

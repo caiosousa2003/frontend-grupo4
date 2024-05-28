@@ -5,7 +5,7 @@ export async function loginUsuario(body){
     return data;
 }
 
-export async function updateProjeto(params, body){
-    const {data} = await api.update("/projetos", body);
+export async function updateProjeto(id, body){
+    const {data} = await api.update(`/projetos/:${id}`, body);
     return data;
 }
