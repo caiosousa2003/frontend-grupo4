@@ -82,3 +82,7 @@ export const InputModal = styled.input`
     width: 70%;
   }
 `;
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+`;

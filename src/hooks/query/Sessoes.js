@@ -23,7 +23,7 @@ export function useDeleteSessoes({
         onError,
     })
 }
-export function usePostTools({
+export function usePostSessoes({
     onSuccess = ()=>{},
     onError = (err) => console.log(err),
 }={}){

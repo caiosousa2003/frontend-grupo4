@@ -19,6 +19,10 @@ export const Line = styled.div`
 export const DivModal = styled.div`
   background-color: #111;
 `;
+export const DivForm = styled.div`
+  background-color: #111;
+  color: white;
+`;
 export const TituloModal = styled.h1`
   color: white;
 `;
@@ -27,6 +31,7 @@ export const BodyModal = styled.div`
   display: flex;
   color: white;
 `;
+
 export const FooterModal = styled.div``;
 export const Cargo = styled.div``;
 export const Nome = styled.div``;
