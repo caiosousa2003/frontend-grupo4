@@ -68,10 +68,15 @@ export const InputTlt = styled.h1`
 `;
 export const InputModal = styled.input`
   font-size: 12px;
+  border: none;
   width: 250px;
   height: 30px;
+  border: ${(props) => (props?.error ? "1px solid red" : "1px solid black")};
   padding-left: 10px;
   border-radius: 5px;
+  &:focus {
+    outline: none;
+  }
   @media screen and (max-width: 450px) {
     width: 100%;
   }

@@ -6,7 +6,6 @@ export async function loginUsuario(body) {
 }
 export async function GetSessoes() {
   const { data } = await api.get("/sessoes");
-  console.log(data);
   return data;
 }
 export async function PostSessoes(body) {
