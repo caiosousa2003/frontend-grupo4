@@ -1,6 +1,25 @@
 import { Modal } from "antd";
 import { styled } from "styled-components";
 
+export const SelectModal = styled.select`
+  border-radius: 0px;
+  border: none;
+  &:focus {
+    border: 1px solid yellow;
+  }
+  &:hover {
+    background-color: white;
+  }
+`;
+export const OptionsModal = styled.option`
+  border-radius: 0px;
+  color: black;
+  text-decoration: none;
+  background-color: white;
+  &:hover {
+    background-color: white;
+  }
+`;
 export const ModalStyle = styled(Modal)`
   .ant-modal-content {
     @media screen and (max-width: 578px) {
@@ -34,6 +53,7 @@ export const ModalBtn = styled.button`
   color: #fdd100;
   white-space: nowrap;
   margin-top: 20px;
+  margin-bottom: 15px;
   border: 1px solid #fdd100;
   cursor: pointer;
 

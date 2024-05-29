@@ -16,3 +16,7 @@ export async function DeleteSessoes(id) {
   const { data } = await api.delete(`/sessoes/${id}`);
   return data;
 }
+export async function GetProjetos(){
+  const {data} = await api.get("/projetos")
+  return data;
+}

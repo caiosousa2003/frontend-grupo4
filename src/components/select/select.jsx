@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Radio, Select, Space } from 'antd';
+import React, { useState } from "react";
+import { Radio, Select, Space } from "antd";
 const options = [];
 for (let i = 10; i < 36; i++) {
   options.push({
@@ -10,8 +10,8 @@ for (let i = 10; i < 36; i++) {
 const handleChange = (value) => {
   console.log(`Selected: ${value}`);
 };
-const App = () => {
-  const [size, setSize] = useState('middle');
+const SelectDefault = () => {
+  const [size, setSize] = useState("middle");
   const handleSizeChange = (e) => {
     setSize(e.target.value);
   };
@@ -27,7 +27,7 @@ const App = () => {
       <Space
         direction="vertical"
         style={{
-          width: '100%',
+          width: "100%",
         }}
       >
         <Select
@@ -43,10 +43,10 @@ const App = () => {
           mode="multiple"
           size={size}
           placeholder="Please select"
-          defaultValue={['a10', 'c12']}
+          defaultValue={["a10", "c12"]}
           onChange={handleChange}
           style={{
-            width: '100%',
+            width: "100%",
           }}
           options={options}
         />
@@ -54,10 +54,10 @@ const App = () => {
           mode="tags"
           size={size}
           placeholder="Please select"
-          defaultValue={['a10', 'c12']}
+          defaultValue={["a10", "c12"]}
           onChange={handleChange}
           style={{
-            width: '100%',
+            width: "100%",
           }}
           options={options}
         />
@@ -65,4 +65,4 @@ const App = () => {
     </>
   );
 };
-export default App;
+export default SelectDefault;
