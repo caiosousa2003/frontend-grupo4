@@ -17,7 +17,7 @@ export const DivFooterContent = styled.div`
 `;
 export const DivFooterContacts = styled.div`
   margin-left: 150px;
-  margin-top: 20px;
+  margin-top: ;
 `;
 export const TitleLogo = styled.h2``;
 export const DivFooterSocial = styled.div`
@@ -26,13 +26,16 @@ export const DivFooterSocial = styled.div`
 export const FooterLink = styled.a`
   color: #f5f5f5;
   text-decoration: none;
+  opacity: 1;
+  transition: opacity 1s ease 0s;
   &:hover {
+    opacity: 0.6;
     color: yellow;
   }
 `;
 export const FooterList = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.5rem;
   list-style: none;
 `;

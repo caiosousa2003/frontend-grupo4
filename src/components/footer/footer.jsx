@@ -22,6 +22,7 @@ export default function FooterPrincipal() {
           <li>
             <h3
               style={{
+                textShadow: "2px 2px 2px rgba(255, 249, 79, 0.63)",
                 fontSize: "30px",
                 color: "white",
               }}
@@ -54,6 +55,7 @@ export default function FooterPrincipal() {
           <li>
             <h3
               style={{
+                textShadow: "2px 2px 2px rgba(255, 249, 79, 0.63)",
                 fontSize: "30px",
                 color: "white",
               }}
