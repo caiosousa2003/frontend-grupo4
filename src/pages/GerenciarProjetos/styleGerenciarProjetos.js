@@ -104,6 +104,7 @@ export const Item = styled.line`
     color: ${colors.font.secondary};
     font-size: 30px;
     margin-right: 100px;
+    font-weight: bold;
     @media screen and (max-width: 500px){
         font-size: 20px;
         margin-right: 55px;

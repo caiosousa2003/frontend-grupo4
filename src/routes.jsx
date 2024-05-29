@@ -12,6 +12,7 @@ import EditarUsuario from "./pages/EditarUsuario/EditarUsuario";
 import Login from "./pages/Login/Login";
 import EditarProjetos from "./pages/EditarProjetos/EditarProjetos";
 import GerenciarProjetos from "./pages/GerenciarProjetos/GerenciaProjetos";
+import GerenciarUsuarios from "./pages/GerenciarUsuarios/GerenciarUsuarios";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
       <Route path="editar-usuario" element={<EditarUsuario/>}/>
       <Route path="editar-projetos" element={<EditarProjetos/>}/>
       <Route path="gerenciar-projetos" element={<GerenciarProjetos/>}/>
+      <Route path="gerenciar-usuarios" element={<GerenciarUsuarios/>}/>
     </Route>
   )
 );
