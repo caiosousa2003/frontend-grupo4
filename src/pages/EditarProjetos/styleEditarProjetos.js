@@ -89,4 +89,15 @@ export const InputDescricao = styled.textarea`
         outline: none;
         border: 2px solid yellow;
     }
-`
+`;
+
+export const Alert = styled.p`
+  color: ${colors.font.secondary};
+  text-transform: uppercase;
+  text-decoration: solid;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  text-align: left;
+  width: 43%;
+`;

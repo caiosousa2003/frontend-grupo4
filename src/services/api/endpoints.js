@@ -50,7 +50,7 @@ export async function deleteProjetos(id){
     return data;
 }
 
-export async function updateProjetos(id, body){
-    const {data} = await api.put(`/projetos/${id}`, body);
+export async function updateProjetos(obj){
+    const {data} = await api.put(`/projetos/${obj.id}`, obj.body);
     return data;
 }

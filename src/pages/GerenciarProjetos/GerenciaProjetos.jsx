@@ -51,6 +51,10 @@ function GerenciarProjetos() {
         createProjeto(data);
     };
 
+    const EditProjeto = (id) => {
+        navigate("/editar-projetos", { state: id  } )
+    };
+
 return (
     <div>
     <Header cadastro={true} />
@@ -80,7 +84,7 @@ return (
             {projetos?.map((projeto, index) => (
                 <ContainerLine key={index}>
                     <Item>{projeto?.nome}</Item>
-                    <Icon onClick={() => console.log("PAGE EDITAR")} src={IconEdit}></Icon>
+                    <Icon onClick={() => EditProjeto(projeto?._id)} src={IconEdit}></Icon>
                     <Icon onClick={() => console.log("MODAL")} src={IconTrash} margin="0px"></Icon>
                 </ContainerLine>
             ))}

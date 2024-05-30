@@ -20,7 +20,7 @@ const router = createBrowserRouter(
       <Route path="cadastro" element={<Cadastro />} />
       <Route path="login" element={<Login/>}/>
       <Route path="/" element={<Home />} />
-      <Route path="editar-usuario" element={<EditarUsuario/>}/>
+      <Route path="editar-usuarios" element={<EditarUsuario/>}/>
       <Route path="editar-projetos" element={<EditarProjetos/>}/>
       <Route path="gerenciar-projetos" element={<GerenciarProjetos/>}/>
       <Route path="gerenciar-usuarios" element={<GerenciarUsuarios/>}/>
