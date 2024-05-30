@@ -9,11 +9,18 @@ import { validador } from "./utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useQueryClient } from "@tanstack/react-query";
 import useAuthStore from "../../Stores/auth";
+import { useEffect } from "react";
 
 function Login() {
     
     const { register, handleSubmit, formState: { errors } } = useForm({ resolver: zodResolver(validador) });
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if (useAuthStore.getState().token) {
+            navigate("/");
+        }
+    });
     
     const queryClient = useQueryClient();
     const setToken = useAuthStore((state) => state.setToken);

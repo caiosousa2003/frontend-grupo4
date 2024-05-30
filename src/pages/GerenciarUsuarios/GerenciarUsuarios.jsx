@@ -2,24 +2,28 @@ import { ContainerPrincipal, Titulo, ContainerList, Item, Icon, ContainerLine } 
 import Header from "../../components/header/header";
 import IconEdit from '../../assets/IconEdit.png';
 import IconTrash from '../../assets/IconTrash.png';
-import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useQueryClient } from "@tanstack/react-query";
-import { useUpdateProjeto } from "../../hooks/query/UpdateProjeto";
+import { useDeleteUsuarios, useGetUsuarios } from "../../hooks/query/Usuarios";
 
 function GerenciarUsuarios() {
     
-    const { register, handleSubmit, formState: { errors } } = useForm();
     const navigate = useNavigate();
-    
+
     const queryClient = useQueryClient();
 
-    const { mutate: updateProjeto } = useUpdateProjeto({
+    const { data: usuarios } = useGetUsuarios({
+        onError: (err) => {
+            alert(err.response.data.message);
+            navigate('/login');
+        },
+    });
+
+    const { mutate: deleteUsuario } = useDeleteUsuarios({
         onSuccess: () => {
             queryClient.invalidateQueries({
-                queryKey: ['projeto'],
+                queryKey: ["usuarios"]
             });
-            navigate('/');
         },
         onError: (err) => {
             alert(err.response.data.message);
@@ -32,26 +36,13 @@ return (
     <ContainerPrincipal>
         <Titulo>GERENCIAR USUÁRIOS</Titulo>
         <ContainerList>
-            <ContainerLine>
-                <Item>USUÁRIO 1</Item>
-                <Icon src={IconEdit}></Icon>
-                <Icon src={IconTrash} margin="0px"></Icon>
-            </ContainerLine>
-            <ContainerLine>
-                <Item>USUÁRIO 1</Item>
-                <Icon src={IconEdit}></Icon>
-                <Icon src={IconTrash} margin="0px"></Icon>
-            </ContainerLine>
-            <ContainerLine>
-                <Item>USUÁRIO 1</Item>
-                <Icon src={IconEdit}></Icon>
-                <Icon src={IconTrash} margin="0px"></Icon>
-            </ContainerLine>
-            <ContainerLine>
-                <Item>USUÁRIO 1</Item>
-                <Icon src={IconEdit}></Icon>
-                <Icon src={IconTrash} margin="0px"></Icon>
-            </ContainerLine>
+            {usuarios?.map((usuario, index) => (
+                <ContainerLine key={index}>
+                    <Item>{usuario?.nome}</Item>
+                    <Icon onClick={() => console.log("PAGE EDITAR")} src={IconEdit}></Icon>
+                    <Icon onClick={() => console.log("MODAL")} src={IconTrash} margin="0px"></Icon>
+                </ContainerLine>
+            ))}
         </ContainerList>
     </ContainerPrincipal>
     </div>

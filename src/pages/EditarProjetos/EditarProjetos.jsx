@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 // import { zodResolver } from "@hookform/resolvers/zod";
 import { useQueryClient } from "@tanstack/react-query";
-import { useUpdateProjeto } from "../../hooks/query/UpdateProjeto";
+import { useUpdateProjetos } from "../../hooks/query/Projetos";
 
 function EditarProjetos() {
     
@@ -15,7 +15,7 @@ function EditarProjetos() {
     
     const queryClient = useQueryClient();
 
-    const { mutate: updateProjeto } = useUpdateProjeto({
+    const { mutate: updateProjeto } = useUpdateProjetos({
         onSuccess: () => {
             queryClient.invalidateQueries({
                 queryKey: ['projeto'],

@@ -122,3 +122,14 @@ export const Icon = styled.img`
         height: 22px;
     }
 `;
+
+export const Alert = styled.p`
+  color: ${colors.font.secondary};
+  text-transform: uppercase;
+  text-decoration: solid;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  text-align: left;
+  width: 43%;
+`;
