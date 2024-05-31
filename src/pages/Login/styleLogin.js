@@ -43,7 +43,7 @@ export const Form = styled.form`
   @media screen and (max-width: 400px) {
     height: 92vh;
   }
-`
+`;
 
 export const Alert = styled.p`
   color: ${colors.font.secondary};
@@ -54,4 +54,4 @@ export const Alert = styled.p`
   margin-bottom: 2px;
   text-align: left;
   width: 43%;
-`
+`;

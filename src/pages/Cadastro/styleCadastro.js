@@ -8,14 +8,26 @@ export const DivPrincipal = styled.div`
   height: 90vh;
   @media screen and (max-width: 400px) {
     height: 92vh;
-    
-    
   }
 `;
 
 export const TituloCadastro = styled.h1`
   color: yellow;
   font-size: 48px;
+  @media screen and (max-width: 400px) {
+    font-size: 40px;
+  }
+`;
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 90%;
+  @media screen and (max-width: 400px) {
+    height: 92vh;
+  }
 `;
 
 export const Alert = styled.p`
@@ -27,4 +39,4 @@ export const Alert = styled.p`
   margin-bottom: 2px;
   text-align: left;
   width: 43%;
-`
+`;
