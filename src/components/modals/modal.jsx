@@ -1,5 +1,3 @@
-import { Modal } from "antd";
-import { InputDefault } from "../commom/InputDefault";
 import {
   ModalStyle,
   ModalBtn,

@@ -91,16 +91,23 @@ export const ContainerList = styled.div`
     flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
+    width: 500px;
+    @media screen and (max-width: 620px){
+        width: 80%;
+    }
 `;
 
 export const ContainerLine = styled.div`
-    display: flex;
-    flex-direction: row;
+    display: grid;
     align-items: center;
     margin: 10px;
+    width: 100%;
 `;
 
 export const Item = styled.line`
+    grid-column: 1 / 2;
+    display: flex;
+    justify-content: flex-start;
     color: ${colors.font.secondary};
     font-size: 30px;
     margin-right: 100px;
@@ -109,6 +116,13 @@ export const Item = styled.line`
         font-size: 20px;
         margin-right: 55px;
     }
+`;
+
+export const DivIcons = styled.div`
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row; 
 `;
 
 export const Icon = styled.img`
@@ -132,4 +146,11 @@ export const Alert = styled.p`
   margin-bottom: 2px;
   text-align: left;
   width: 43%;
+`;
+
+export const DivModal = styled.div`
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

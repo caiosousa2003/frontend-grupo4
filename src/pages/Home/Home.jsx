@@ -1,7 +1,7 @@
 import Carrossel from "./Carrossel";
 import Header from "../../components/header/header";
 import { ButtonModal } from "../../components/commom/ButtonModal";
-import Modal from "../../components/modal/modal";
+import Modal from "../../components/modals/modal";
 import { DivModal } from "./styleHome";
 import { useState } from "react";
 function Home() {

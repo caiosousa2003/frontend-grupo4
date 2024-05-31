@@ -1,4 +1,4 @@
-import { Campo, ContainerPrincipal, Form, Titulo, Label, InputDescricao, ContainerForm, ContainerList, Item, Icon, ContainerLine, Alert } from "./styleGerenciarProjetos";
+import { Campo, ContainerPrincipal, Form, Titulo, Label, InputDescricao, ContainerForm, ContainerList, Item, Icon, ContainerLine, Alert, DivModal, DivIcons } from "./styleGerenciarProjetos";
 import Header from "../../components/header/header";
 import { InputDefault } from "../../components/commom/InputDefault";
 import { ButtonDefaultBlack } from "../../components/commom/ButtonDefaultBlack";
@@ -10,12 +10,37 @@ import { useQueryClient } from "@tanstack/react-query";
 import { useCreateProjetos, useDeleteProjetos, useGetProjetos } from "../../hooks/query/Projetos";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { validador } from "./utils";
+import { useState } from "react";
+import ConfirmModal from "../../components/modals/confirmModal";
 
 function GerenciarProjetos() {
     
     const { register, handleSubmit, reset, formState: { errors } } = useForm({ resolver: zodResolver(validador) });
     const navigate = useNavigate();
+
+    // MODAL
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [id, setId] = useState();
+
+    const showModal = (id_projeto) => {
+        setId(id_projeto);
+        setIsModalOpen(true);
+    };
+
+    const confirmDelete = () => {
+        deleteProjeto(id);
+        setId(null);
+        setIsModalOpen(false);
+    }
+
+    const cancelDelete = () => {
+        setId(null);
+        setIsModalOpen(false);
+    }
+
     
+    // FUNÇÕES DE REQUISIÇÃO
+
     const queryClient = useQueryClient();
 
     const { data: projetos } = useGetProjetos({
@@ -47,6 +72,7 @@ function GerenciarProjetos() {
         },
     });
 
+    // AÇÕES DOS BOTÕES DE CRIAR NOVO E EDITAR
     const onSubmit = (data) => {
         createProjeto(data);
     };
@@ -58,6 +84,14 @@ function GerenciarProjetos() {
 return (
     <div>
     <Header cadastro={true} />
+    <DivModal>
+        <ConfirmModal
+          isModalOpen={isModalOpen}
+          cancel={cancelDelete}
+          confirmDelete={confirmDelete}
+          item="projeto"
+        ></ConfirmModal>
+    </DivModal>
     <ContainerPrincipal>
         <Titulo>GERENCIAR PROJETOS</Titulo>
         <Form onSubmit={handleSubmit(onSubmit)}>
@@ -84,8 +118,11 @@ return (
             {projetos?.map((projeto, index) => (
                 <ContainerLine key={index}>
                     <Item>{projeto?.nome}</Item>
-                    <Icon onClick={() => EditProjeto(projeto?._id)} src={IconEdit}></Icon>
-                    <Icon onClick={() => console.log("MODAL")} src={IconTrash} margin="0px"></Icon>
+                    <DivIcons>
+                        <Icon onClick={() => EditProjeto(projeto?._id)} src={IconEdit}></Icon>
+                        <Icon onClick={() => showModal(projeto?._id)} src={IconTrash} margin="0px"></Icon>
+                    </DivIcons>
+                    
                 </ContainerLine>
             ))}
         </ContainerList>
