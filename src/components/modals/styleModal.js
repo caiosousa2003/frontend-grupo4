@@ -1,6 +1,25 @@
 import { Modal } from "antd";
 import { styled } from "styled-components";
 
+export const SelectModal = styled.select`
+  border-radius: 0px;
+  border: none;
+  &:focus {
+    border: 1px solid yellow;
+  }
+  &:hover {
+    background-color: white;
+  }
+`;
+export const OptionsModal = styled.option`
+  border-radius: 0px;
+  color: black;
+  text-decoration: none;
+  background-color: white;
+  &:hover {
+    background-color: white;
+  }
+`;
 export const ModalStyle = styled(Modal)`
   .ant-modal-content {
     @media screen and (max-width: 578px) {
@@ -34,6 +53,7 @@ export const ModalBtn = styled.button`
   color: #fdd100;
   white-space: nowrap;
   margin-top: 20px;
+  margin-bottom: 15px;
   border: 1px solid #fdd100;
   cursor: pointer;
 
@@ -68,10 +88,15 @@ export const InputTlt = styled.h1`
 `;
 export const InputModal = styled.input`
   font-size: 12px;
+  border: none;
   width: 250px;
   height: 30px;
+  border: ${(props) => (props?.error ? "1px solid red" : "1px solid black")};
   padding-left: 10px;
   border-radius: 5px;
+  &:focus {
+    outline: none;
+  }
   @media screen and (max-width: 450px) {
     width: 100%;
   }
@@ -81,4 +106,8 @@ export const InputModal = styled.input`
   @media screen and (max-width: 300px) {
     width: 70%;
   }
+`;
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
 `;
