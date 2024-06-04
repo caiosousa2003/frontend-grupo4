@@ -3,9 +3,10 @@ import { styled } from "styled-components";
 
 export const SelectModal = styled.select`
   border-radius: 0px;
-  border: none;
+  border: ${(props) =>
+    props.hasError ? "1px solid red" : "1px solid #d9d9d9"};
   &:focus {
-    border: 1px solid yellow;
+    border-color: ${(props) => (props.hasError ? "red" : "#40a9ff")};
   }
   &:hover {
     background-color: white;
