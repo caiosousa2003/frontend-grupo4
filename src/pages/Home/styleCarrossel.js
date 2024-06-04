@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 export const DivPrin = styled.div`
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,33 +18,23 @@ export const DivConteiner = styled.div`
 
 export const DivImagem = styled.div`
   margin: 0px 40px;
-  height: 321px;
-  @media (max-width: 795px) {
-    margin: 0px 25px;
-    height: 245px;
-  }
-  @media (max-width: 610px) {
-    margin: 0px 10px;
-    height: 190px;
-  }
+  height: 100%;
 `;
 
 export const ImgCarrossel = styled.img`
   height: 100%;
-  width: 613px;
+  width: 100%;
   margin: 0px;
   padding: 0px;
   border-radius: 10px;
   @media (max-width: 795px) {
     height: 100%;
-    width: 467.86px;
     margin: 0px;
     padding: 0px;
     border-radius: 7px;
   }
   @media (max-width: 610px) {
     height: 100%;
-    width: 362.82px;
     margin: 0px;
     padding: 0px;
     border-radius: 5px;

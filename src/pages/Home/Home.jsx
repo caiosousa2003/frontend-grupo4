@@ -1,7 +1,15 @@
 import Carrossel from "./Carrossel";
 import Header from "../../components/header/header";
 import { ButtonModal } from "../../components/commom/ButtonModal";
-import { Container, DivModal, Line, Cargo, Nome, Email } from "./styleHome";
+import {
+  Container,
+  DivModal,
+  Line,
+  Cargo,
+  Nome,
+  Email,
+  DivContainer,
+} from "./styleHome";
 import { useState } from "react";
 import {
   useDeleteSessoes,
@@ -37,7 +45,7 @@ function Home() {
     setIsModalOpen(true);
   };
   return (
-    <div style={{ backgoundColor: "#111" }}>
+    <DivContainer>
       <Header />
       <DivModal>
         <Modal
@@ -58,7 +66,7 @@ function Home() {
         ))}
       </Container>
       <FooterPrincipal />
-    </div>
+    </DivContainer>
   );
 }
 
