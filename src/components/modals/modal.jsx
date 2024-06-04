@@ -4,7 +4,6 @@ import {
   GlobalDiv,
   ModalTlt,
   InputTlt,
-  InputModal,
   Form,
   SelectModal,
   OptionsModal,
@@ -16,8 +15,8 @@ import { usePostSessoes } from "../../hooks/query/Sessoes";
 import useAuthStore from "../../Stores/auth";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useGetProjetos } from "../../hooks/query/Projetos";
-import React, { useEffect, useState } from "react";
-import { Select } from "antd";
+import React, { useState } from "react";
+import { validador } from "./utils";
 
 export default function Modal({ isModalOpen, setIsModalOpen }) {
   // Projetos
@@ -59,7 +58,7 @@ export default function Modal({ isModalOpen, setIsModalOpen }) {
     handleSubmit,
     register,
     formState: { errors },
-  } = useForm();
+  } = useForm({ resolver: zodResolver(validador) });
 
   const handleOk = () => {
     setIsModalOpen(false);
@@ -107,6 +106,11 @@ export default function Modal({ isModalOpen, setIsModalOpen }) {
                   <OptionsModal>{projeto.nome}</OptionsModal>
                 ))}
             </SelectModal>
+            {errors.project && (
+              <p style={{ color: "red", fontSize: "12px" }}>
+                {errors.project.message}
+              </p>
+            )}
             <ModalBtn>SALVAR</ModalBtn>
           </Form>
         </GlobalDiv>

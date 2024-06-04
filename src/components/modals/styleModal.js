@@ -3,9 +3,10 @@ import { styled } from "styled-components";
 
 export const SelectModal = styled.select`
   border-radius: 0px;
-  border: none;
+  border: ${(props) =>
+    props.hasError ? "1px solid red" : "1px solid #d9d9d9"};
   &:focus {
-    border: 1px solid yellow;
+    border-color: ${(props) => (props.hasError ? "red" : "#40a9ff")};
   }
   &:hover {
     background-color: white;
@@ -22,18 +23,7 @@ export const OptionsModal = styled.option`
 `;
 export const ModalStyle = styled(Modal)`
   .ant-modal-content {
-    @media screen and (max-width: 578px) {
-      width: 80%;
-    }
-    @media screen and (max-width: 420px) {
-      width: 80%;
-    }
-    @media screen and (max-width: 340px) {
-      width: 70%;
-    }
-    @media screen and (max-width: 300px) {
-      width: 60%;
-    }
+    width: 80%;
   }
 
   .ant-modal-close {
@@ -56,14 +46,6 @@ export const ModalBtn = styled.button`
   margin-bottom: 15px;
   border: 1px solid #fdd100;
   cursor: pointer;
-
-  @media screen and (max-width: 300px) {
-    width: 80%;
-  }
-  @media screen and (max-width: 300px) {
-    width: 50%;
-    font-size: 12px;
-  }
 `;
 export const GlobalDiv = styled.div`
   display: flex;
@@ -75,9 +57,6 @@ export const ModalTlt = styled.h1`
   color: black;
   font-weight: 10px;
   white-space: nowrap;
-  @media screen and (max-width: 300px) {
-    font-size: 15px;
-  }
 `;
 export const InputTlt = styled.h1`
   color: black;
