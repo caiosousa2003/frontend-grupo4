@@ -4,6 +4,8 @@ import { ButtonModal } from "../../components/commom/ButtonModal";
 import Modal from "../../components/modals/modal";
 import { DivModal } from "./styleHome";
 import { useState } from "react";
+import FooterPrincipal from "../../components/footer/Footer";
+
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
@@ -20,6 +22,7 @@ function Home() {
         <ButtonModal onClick={() => showModal()}>Fazer login</ButtonModal>
       </DivModal>
       <Carrossel />
+      <FooterPrincipal />
     </div>
   );
 }
