@@ -45,11 +45,6 @@ export default function FooterPrincipal() {
               Otávio
             </FooterLink>
           </li>
-          <li>
-            <FooterLink href="https://github.com/ConradoFreitas">
-              Conrado
-            </FooterLink>
-          </li>
         </FooterList>
         <FooterList>
           <li>
