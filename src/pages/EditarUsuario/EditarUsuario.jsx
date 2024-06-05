@@ -5,6 +5,7 @@ import {
   QuadradoCinza,
   Botao,
   DivPrincipal,
+  DivTlt,
 } from "./styleEditarUsuario";
 import Header from "../../components/header/header";
 import { InputDefault } from "../../components/commom/InputDefault";
@@ -15,7 +16,9 @@ function EditarUsuario() {
     <div>
       <Header cadastro={true} />
       <DivPrincipal>
-        <TituloEditar>EDITAR USUÁRIO</TituloEditar>
+        <DivTlt>
+          <TituloEditar>EDITAR USUÁRIO</TituloEditar>
+        </DivTlt>
         <QuadradoCinza>
           <ContainerPadrao>
             <TextoPadrao>Nome:</TextoPadrao>

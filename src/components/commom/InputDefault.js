@@ -4,14 +4,11 @@ export const InputDefault = styled.input`
   border-radius: 50px;
   margin-top: ${(props) => props.margintop || "35px"};
   padding-left: 15px;
-  width: ${(props) => props.width || "44%"};
+  width: ${(props) => props.width || "500px"};
   height: ${(props) => props.height || "50px"};
   border: ${(props) => (props?.borda ? "2px solid red" : "none")};
   font-size: ${(props) => props.font || "20px"};
-  @media screen and (max-width: 800px) {
-    width: 60%;
-  }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 600px) {
     width: 80%;
   }
   &:focus {
