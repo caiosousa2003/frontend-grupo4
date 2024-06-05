@@ -17,7 +17,6 @@ export const DivFooterContent = styled.div`
 `;
 export const DivFooterContacts = styled.div`
   margin-left: 150px;
-  margin-top: ;
 `;
 export const TitleLogo = styled.h2``;
 export const DivFooterSocial = styled.div`

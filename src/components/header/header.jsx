@@ -1,15 +1,32 @@
 /* eslint-disable react/prop-types */
-import { LogoHeader, HeaderPrincipal, ReturnHeader } from './styleHeader';
+import { LogoCPE, ContainerHeader, ContainerIcons, IconUsuarios, IconProjetos, ContainerAdmin, ContainerUsuarios, IconEditar, IconSair } from './styleHeader';
 import logo from '../../assets/LogoCadastro.png';
-import x from '../../assets/ReturnCadastro.png';
+import { IoLogOutOutline } from "react-icons/io5";
+import iconEditar from '../../assets/IconEditPreto.png';
+import iconUsuarios from '../../assets/IconUsuarios.png';
+import iconProjetos from '../../assets/IconProjetos.png';
 
-function Header({ cadastro }) {
+function Header() {
+
+
+
+
+
   return (
     <div>
-      <HeaderPrincipal>
-        <LogoHeader src={logo} alt="logo"></LogoHeader>
-        {cadastro && <ReturnHeader src={x}></ReturnHeader>}
-      </HeaderPrincipal>
+      <ContainerHeader>
+        <LogoCPE src={logo} alt="logo"></LogoCPE>
+        <ContainerIcons>
+          <ContainerAdmin>
+            <IconProjetos src={iconProjetos}></IconProjetos>
+            <IconUsuarios src={iconUsuarios}></IconUsuarios>
+          </ContainerAdmin>
+          <ContainerUsuarios>
+            <IconEditar></IconEditar>
+            <IconSair><IoLogOutOutline/></IconSair>
+          </ContainerUsuarios>
+        </ContainerIcons>
+      </ContainerHeader>
     </div>
   );
 }

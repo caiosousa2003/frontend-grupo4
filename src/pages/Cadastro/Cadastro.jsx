@@ -37,7 +37,7 @@ function Cadastro() {
 
   return (
     <div style={{ backgroundColor: "black" }}>
-      <Header cadastro={true}></Header>
+      <Header cadastro={false}></Header>
       <DivPrincipal>
         <TituloCadastro>CADASTRO</TituloCadastro>
         <Form onSubmit={handleSubmit(onSubmit)}>
