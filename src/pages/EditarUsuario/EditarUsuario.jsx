@@ -15,9 +15,10 @@ import { useForm } from 'react-hook-form';
 import { useQueryClient } from '@tanstack/react-query';
 import { useUpdateUsuarios } from '../../hooks/query/Usuarios';
 import { useParams } from 'react-router-dom';
-//import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function EditarUsuario() {
+  const navigate = useNavigate();
   const { id } = useParams();
   const queryClient = useQueryClient();
   const { register, handleSubmit } = useForm();
@@ -59,7 +60,9 @@ function EditarUsuario() {
             <ButtonDefaultBlack>SALVAR</ButtonDefaultBlack>
           </Botao>
         </Form>
-        <ButtonDefaultBlack>CANCELAR</ButtonDefaultBlack>
+        <ButtonDefaultBlack onClick={() => navigate('/gerenciar-usuarios')}>
+          CANCELAR
+        </ButtonDefaultBlack>
       </DivPrincipal>
     </div>
   );
