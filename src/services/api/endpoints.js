@@ -37,11 +37,13 @@ export async function deleteUsuarios(id) {
   return data;
 }
 
-export async function updateUsuarios(id, body) {
-  const { data } = await api.put(`/usuarios/${id}`, body);
-  return data;
+export async function updateUsuario(data) {
+  const { data1 } = await api.put(`/usuarios/${data.id}`, {
+    nome: data.nome,
+    cargo: data.cargo,
+  });
+  return data1;
 }
-
 //SESSÕES
 
 // PROJETOS

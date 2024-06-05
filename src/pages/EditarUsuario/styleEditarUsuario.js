@@ -1,10 +1,13 @@
-import { styled } from 'styled-components';
+import { styled } from "styled-components";
 
 export const TituloEditar = styled.h1`
   color: #ffe712;
   font-size: 48px;
   font-family: Arial;
   margin-bottom: 40px;
+  @media (max-width: 600px) {
+    font-size: 8vw;
+  }
 `;
 
 export const ContainerPadrao = styled.div`
@@ -24,10 +27,17 @@ export const InputPadrao = styled.input`
   border-radius: 10px;
   height: 30px;
 `;
+export const DivTlt = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+`;
+export const QuadradoCinza = styled.div``;
 
-export const QuadradoCinza = styled.div`
+export const Form = styled.form`
   background-color: #313131;
-  width: 40%;
+  width: 720px;
   padding: 10px 15px;
   display: flex;
   flex-direction: column;
@@ -40,7 +50,7 @@ export const QuadradoCinza = styled.div`
 `;
 
 export const TextoPadrao = styled.p`
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #ffe712;
   margin-bottom: 10px;
   padding: 5px;
@@ -50,10 +60,11 @@ export const Botao = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 `;
 
 export const BotaoPadrao = styled.button`
-  width: auto;
+  width: 80%;
   height: auto;
   border: solid 2px yellow;
   border-radius: 15px;
