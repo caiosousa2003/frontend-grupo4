@@ -25,7 +25,7 @@ export const InputPadrao = styled.input`
   height: 30px;
 `;
 
-export const QuadradoCinza = styled.div`
+export const Form = styled.form`
   background-color: #313131;
   width: 40%;
   padding: 10px 15px;
