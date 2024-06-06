@@ -1,46 +1,44 @@
-import Carrossel from "./Carrossel";
-import Header from "../../components/header/header";
-import { ButtonModal } from "../../components/commom/ButtonModal";
+import Carrossel from './Carrossel';
+import Header from '../../components/header/header';
+import TabelaSessoes from './TabelaSessoes';
+import { ButtonModal } from '../../components/commom/ButtonModal';
 import {
-  Container,
+  //   Container,
   DivModal,
-  Line,
-  Cargo,
-  Nome,
-  Email,
+  //   Line,
+  //   Cargo,
+  //   Nome,
+  //   Email,
   DivContainer,
-} from "./styleHome";
-import { useState } from "react";
-import {
-  useDeleteSessoes,
-  useGetSessoes,
-  usePostSessoes,
-} from "../../hooks/query/Sessoes";
-import { FaTrashAlt } from "react-icons/fa";
-import { useQueryClient } from "@tanstack/react-query";
-import useAuthStore from "../../Stores/auth";
-import FooterPrincipal from "../../components/footer/footer";
-import Modal from "../../components/modals/modal";
+} from './styleHome';
+import { useState } from 'react';
+//import {
+//useDeleteSessoes,
+//useGetSessoes,
+//usePostSessoes,
+//} from '../../hooks/query/Sessoes';
+//import { useQueryClient } from '@tanstack/react-query';
+//import useAuthStore from '../../Stores/auth';
+import FooterPrincipal from '../../components/footer/footer';
+import Modal from '../../components/modals/modal';
 
 function Home() {
-  const usuario = useAuthStore((state) => state.usuario);
-  const { data: sessoes } = useGetSessoes({
-    onError: (err) => {
-      console.log(err);
-    },
-  });
-  const { mutate: deleteSessoes } = useDeleteSessoes({
-    onSuccess: () => {
-      queryClient.invalidateQueries({
-        queryKey: ["sessoes"],
-      });
-    },
-    onError: (err) => {
-      console.log(err);
-    },
-  });
-
-  const queryClient = useQueryClient();
+  // const { data: sessoes } = useGetSessoes({
+  //   onError: (err) => {
+  //     console.log(err);
+  //   },
+  // });
+  // const { mutate: deleteSessoes } = useDeleteSessoes({
+  //   onSuccess: () => {
+  //     queryClient.invalidateQueries({
+  //       queryKey: ['sessoes'],
+  //     });
+  //   },
+  //   onError: (err) => {
+  //     console.log(err);
+  //   },
+  // });
+  //const queryClient = useQueryClient();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
@@ -57,7 +55,7 @@ function Home() {
         <ButtonModal onClick={() => showModal()}>Fazer login</ButtonModal>
       </DivModal>
       <Carrossel />
-      <Container>
+      {/* <Container>
         {sessoes?.map((sessao, index) => (
           <Line key={index}>
             <Cargo>{sessao?.id_usuario?.cargo}</Cargo>
@@ -68,7 +66,8 @@ function Home() {
             />
           </Line>
         ))}
-      </Container>
+      </Container> */}
+      <TabelaSessoes></TabelaSessoes>
       <FooterPrincipal />
     </DivContainer>
   );

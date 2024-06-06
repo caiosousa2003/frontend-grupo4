@@ -17,6 +17,7 @@ export async function PostSessoes(body) {
   return data;
 }
 export async function DeleteSessoes(id) {
+  console.log(id);
   const { data } = await api.delete(`/sessoes/${id}`);
   return data;
 }

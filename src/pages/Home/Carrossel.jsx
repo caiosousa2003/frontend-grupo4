@@ -17,8 +17,8 @@ import grupo6 from '../../assets/imgCarrossel6.jpg';
 import bolaAcessa from '../../assets/bolaAceCarrossel.svg';
 import bolaApagada from '../../assets/bolaApaCarrossel.svg';
 
-import { FiChevronRight } from 'react-icons/fi';
-import { FiChevronLeft } from 'react-icons/fi';
+import { BsCaretRightFill } from 'react-icons/bs';
+import { BsCaretLeftFill } from 'react-icons/bs';
 import { useState, useEffect } from 'react';
 
 function Carrossel() {
@@ -77,7 +77,7 @@ function Carrossel() {
       <DivPrin>
         <DivConteiner>
           <Botoes onClick={() => setimgCarrossel(antCarrossel())}>
-            <FiChevronLeft size={tamBotao} color="#FF0" />
+            <BsCaretLeftFill size={tamBotao} color="#FF0" />
           </Botoes>
           <DivImagem>
             <ImgCarrossel
@@ -86,7 +86,7 @@ function Carrossel() {
             ></ImgCarrossel>
           </DivImagem>
           <Botoes onClick={() => setimgCarrossel(proxCarrossel())}>
-            <FiChevronRight size={tamBotao} color="#FF0" />
+            <BsCaretRightFill size={tamBotao} color="#FF0" />
           </Botoes>
         </DivConteiner>
         <ConteinerBolinhas>
