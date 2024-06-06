@@ -34,28 +34,28 @@ function TabelaSessoes() {
   });
 
   return (
-    <DivPrin>
-      <Conteiner>
-        <LinhaPrinc>
-          <ItensLista>Nome</ItensLista>
-          <ItensLista>Cargo</ItensLista>
-          <ItensLista>Entrada</ItensLista>
-          <ItensLista>Saída</ItensLista>
-          <ItensLista>Sair</ItensLista>
-        </LinhaPrinc>
-        {sessoes?.map((sessao, index) => (
-          <LinhaSessoes key={index}>
-            <ItensLista>{sessao?.id_usuario?.nome}</ItensLista>
-            <ItensLista>{sessao?.id_usuario?.cargo}</ItensLista>
-            <ItensLista>{sessao?.timestamps?.createdAt}</ItensLista>
-            <ItensLista>{sessao?.id_usuario?.nome}</ItensLista>
-            <Botao onClick={() => deleteSessoes(sessao?._id)}>
-              <TbLogout size={20} color="white"></TbLogout>
-            </Botao>
-          </LinhaSessoes>
-        ))}
-      </Conteiner>
-    </DivPrin>
+    <div>
+      <DivPrin>
+        <Conteiner>
+          <LinhaPrinc>
+            <ItensLista>MEMBRO</ItensLista>
+            <ItensLista></ItensLista>
+            <ItensLista>TEMPO</ItensLista>
+            <ItensLista></ItensLista>
+          </LinhaPrinc>
+          {sessoes?.map((sessao, index) => (
+            <LinhaSessoes key={index}>
+              <ItensLista>{sessao?.id_usuario?.nome}</ItensLista>
+              <ItensLista>{sessao?.timestamps?.createdAt}</ItensLista>
+              <ItensLista>{sessao?.timestamps?.now}</ItensLista>
+              <Botao onClick={() => deleteSessoes(sessao?.id_usuario?._id)}>
+                <TbLogout size={20} color="white"></TbLogout>
+              </Botao>
+            </LinhaSessoes>
+          ))}
+        </Conteiner>
+      </DivPrin>
+    </div>
   );
 }
 

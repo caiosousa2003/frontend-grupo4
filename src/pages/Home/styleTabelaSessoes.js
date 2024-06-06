@@ -4,37 +4,36 @@ export const Conteiner = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vh;
-  padding: 20px;
-  margin: 20px;
   align-items: center;
   justify-content: center;
   color: white;
   background-color: #222;
-  border-radius: 5px;
+  border: transparent solid;
+  border-radius: 20px;
 `;
 
 export const LinhaPrinc = styled.div`
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: 50% 20% 20% 10%;
   width: 100%;
   align-items: center;
   justify-content: center;
-  color: white;
-  background-color: #111;
-  margin: 5px;
+  background-color: #ffe712;
 `;
 
 export const ItensLista = styled.div`
   font-size: 16;
-  color: white;
+  color: Black;
   text-align: center;
-  padding: 10px 0;
+  padding: 10px 0px;
+  font-weight: bold;
+  font-family: 'Arial';
 `;
 
 export const LinhaSessoes = styled.div`
   display: grid;
   width: 100%;
-  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: 50% 20% 20% 10%;
   align-items: center;
   justify-content: center;
   color: white;
@@ -61,4 +60,5 @@ export const DivPrin = styled.div`
   justify-content: center;
   align-items: center;
   background: #111;
+  margin: 40px 0 150px 0;
 `;
