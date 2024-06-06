@@ -23,7 +23,9 @@ export const OptionsModal = styled.option`
 `;
 export const ModalStyle = styled(Modal)`
   .ant-modal-content {
-    width: 80%;
+    @media screen and (max-width: 560px) {
+      margin: 20px;
+    }
   }
 
   .ant-modal-close {
