@@ -11,6 +11,8 @@ import useAuthStore from '../../Stores/auth';
 function Header() {
 
   const navigate = useNavigate();
+  const usuarioAtual = useAuthStore((state) => state.usuario);
+  const clearAuth = useAuthStore((state) => state.clearAuth)
 
   let home;
   if(useLocation().pathname == "/"){
@@ -20,10 +22,15 @@ function Header() {
   }
 
   let nivel;
-  if(useAuthStore.getState().usuario){
-    nivel = useAuthStore.getState().usuario.usuario.nivel;
+  if(usuarioAtual){
+    nivel = usuarioAtual.usuario.nivel;
   }else{
     nivel = false;
+  }
+
+  const logout = () => {
+    clearAuth();
+    navigate("/login");
   }
 
   return (
@@ -40,7 +47,7 @@ function Header() {
             <ContainerUsuarios>
             <IconEditar onClick={() => alert("...EDITAR PERFIL")}><FaRegEdit style={{ height: "100%", width: "100%" }}/></IconEditar>
             <Linha></Linha>
-            <IconSair><IoLogOutOutline style={{ height: "100%", width: "100%" }}/></IconSair>
+            <IconSair><IoLogOutOutline onClick={logout} style={{ height: "100%", width: "100%" }}/></IconSair>
           </ContainerUsuarios>}
         </ContainerIcons>
       </ContainerHeader>
