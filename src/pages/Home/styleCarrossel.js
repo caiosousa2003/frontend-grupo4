@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled } from 'styled-components';
 
 export const DivPrin = styled.div`
   height: 100%;
@@ -10,7 +10,7 @@ export const DivPrin = styled.div`
 `;
 
 export const DivConteiner = styled.div`
-  height: auto;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,19 +19,25 @@ export const DivConteiner = styled.div`
 export const DivImagem = styled.div`
   margin: 0px 40px;
   height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  @media (max-width: 795px) {
+    border-radius: 7px;
+  }
+  @media (max-width: 610px) {
+    border-radius: 5px;
+  }
 `;
 
 export const ImgCarrossel = styled.img`
-  height: 100%;
+  height: 100;
   width: 100%;
   margin: 0px;
   padding: 0px;
-  border-radius: 10px;
   @media (max-width: 795px) {
     height: 100%;
     margin: 0px;
     padding: 0px;
-    border-radius: 7px;
   }
   @media (max-width: 610px) {
     height: 100%;

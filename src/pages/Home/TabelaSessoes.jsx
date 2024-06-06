@@ -39,6 +39,24 @@ function TabelaSessoes() {
     },
   });
 
+  function updateAgora() {
+    const agora = new Date();
+    return agora;
+  }
+
+  setInterval(updateAgora, 1000);
+
+  const calculaHora = (horaSubtraida) => {
+    const subtracao = updateAgora().getTime() - horaSubtraida.getTime();
+    const tempo = new Date(subtracao);
+    console.log(tempo);
+    return `${String(tempo.getUTCHours()).padStart(2, '0')}:${String(
+      tempo.getMinutes(),
+    ).padStart(2, '0')}
+    `;
+  };
+
+  setInterval(calculaHora, 1000);
   return (
     <Div>
       <Conteiner>
@@ -53,7 +71,7 @@ function TabelaSessoes() {
             <ConteinerMembro>
               <ConteinerNomProj>
                 <Nome>{sessao?.id_usuario?.nome}</Nome>
-                <Projeto>Projeto</Projeto>
+                <Projeto>{sessao?.id_projeto?.nome}</Projeto>
               </ConteinerNomProj>
               <Cargo>{sessao?.id_usuario?.cargo}</Cargo>
             </ConteinerMembro>
@@ -65,7 +83,7 @@ function TabelaSessoes() {
               '0',
             )}
             `}</Tempo>
-            <Tempo></Tempo>
+            <Tempo>{calculaHora(new Date(sessao.createdAt))}</Tempo>
             <Botao onClick={() => deleteSessoes(sessao?.id_usuario?._id)}>
               <TbLogout size={20} color="white"></TbLogout>
             </Botao>
