@@ -23,6 +23,7 @@ import FooterPrincipal from "../../components/footer/footer";
 import Modal from "../../components/modals/modal";
 
 function Home() {
+  const usuario = useAuthStore((state) => state.usuario);
   const { data: sessoes } = useGetSessoes({
     onError: (err) => {
       console.log(err);
@@ -38,6 +39,7 @@ function Home() {
       console.log(err);
     },
   });
+
   const queryClient = useQueryClient();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -61,7 +63,9 @@ function Home() {
             <Cargo>{sessao?.id_usuario?.cargo}</Cargo>
             <Nome>{sessao?.id_usuario?.nome}</Nome>
             <Email>{sessao?.id_usuario?.email}</Email>
-            <FaTrashAlt onClick={() => deleteSessoes(sessao?._id)} />
+            <FaTrashAlt
+              onClick={() => deleteSessoes(sessao?.id_usuario?._id)}
+            />
           </Line>
         ))}
       </Container>

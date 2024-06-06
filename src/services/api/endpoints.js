@@ -44,7 +44,6 @@ export async function updateUsuario(data) {
   });
   return data1;
 }
-//SESSÕES
 
 // PROJETOS
 
