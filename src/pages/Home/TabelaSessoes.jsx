@@ -6,7 +6,7 @@ import {
   Botao,
   DivPrin,
 } from './styleTabelaSessoes.js';
-import { FaTrashAlt } from 'react-icons/fa';
+import { TbLogout } from 'react-icons/tb';
 import { useQueryClient } from '@tanstack/react-query';
 import {
   useDeleteSessoes,
@@ -49,8 +49,8 @@ function TabelaSessoes() {
             <ItensLista>{sessao?.id_usuario?.cargo}</ItensLista>
             <ItensLista>{sessao?.timestamps?.createdAt}</ItensLista>
             <ItensLista>{sessao?.id_usuario?.nome}</ItensLista>
-            <Botao onClick={() => deleteSessoes}>
-              <FaTrashAlt color="white"></FaTrashAlt>
+            <Botao onClick={() => deleteSessoes(sessao?._id)}>
+              <TbLogout size={20} color="white"></TbLogout>
             </Botao>
           </LinhaSessoes>
         ))}

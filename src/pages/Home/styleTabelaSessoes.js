@@ -24,9 +24,11 @@ export const LinhaPrinc = styled.div`
   margin: 5px;
 `;
 
-export const ItensLista = styled.p`
+export const ItensLista = styled.div`
   font-size: 16;
   color: white;
+  text-align: center;
+  padding: 10px 0;
 `;
 
 export const LinhaSessoes = styled.div`
