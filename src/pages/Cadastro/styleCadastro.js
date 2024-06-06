@@ -25,6 +25,7 @@ export const Form = styled.form`
   align-items: center;
   width: 100%;
   height: 90%;
+  padding-bottom: 15px;
   @media screen and (max-width: 400px) {
     height: 92vh;
   }
