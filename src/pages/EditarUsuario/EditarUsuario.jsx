@@ -6,7 +6,6 @@ import {
   Botao,
   DivPrincipal,
 } from "./styleEditarUsuario";
-import Header from "../../components/header/header";
 import { InputDefault } from "../../components/commom/InputDefault";
 import { ButtonDefaultBlack } from "../../components/commom/ButtonDefaultBlack";
 import { useForm } from "react-hook-form";
@@ -42,7 +41,6 @@ function EditarUsuario() {
   };
   return (
     <div>
-      <Header cadastro={true} />
       <DivPrincipal>
         <TituloEditar>EDITAR USUÁRIO</TituloEditar>
         <Form onSubmit={handleSubmit(onSubmit)}>

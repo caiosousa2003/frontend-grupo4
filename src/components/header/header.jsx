@@ -28,11 +28,6 @@ function Header() {
     nivel = false;
   }
 
-  const logout = () => {
-    clearAuth();
-    navigate("/login");
-  }
-
   return (
     <div>
       <ContainerHeader>
@@ -47,7 +42,7 @@ function Header() {
             <ContainerUsuarios>
             <IconEditar onClick={() => alert("...EDITAR PERFIL")}><FaRegEdit style={{ height: "100%", width: "100%" }}/></IconEditar>
             <Linha></Linha>
-            <IconSair><IoLogOutOutline onClick={logout} style={{ height: "100%", width: "100%" }}/></IconSair>
+            <IconSair><IoLogOutOutline onClick={clearAuth} style={{ height: "100%", width: "100%" }}/></IconSair>
           </ContainerUsuarios>}
         </ContainerIcons>
       </ContainerHeader>

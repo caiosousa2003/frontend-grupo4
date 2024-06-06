@@ -1,5 +1,4 @@
 import { Alert, DivPrincipal, Form, TituloCadastro } from "./styleCadastro";
-import Header from "../../components/header/header";
 import { ButtonDefault } from "../../components/commom/ButtonDefault";
 import { InputDefault } from "../../components/commom/InputDefault";
 import { useForm } from "react-hook-form";
@@ -37,7 +36,6 @@ function Cadastro() {
 
   return (
     <div style={{ backgroundColor: "black" }}>
-      <Header cadastro={false}></Header>
       <DivPrincipal>
         <TituloCadastro>CADASTRO</TituloCadastro>
         <Form onSubmit={handleSubmit(onSubmit)}>

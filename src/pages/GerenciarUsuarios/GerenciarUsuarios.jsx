@@ -8,7 +8,6 @@ import {
   DivModal,
   DivIcons,
 } from './sytleGerenciarUsuarios';
-import Header from '../../components/header/header';
 import IconEdit from '../../assets/IconEdit.png';
 import IconTrash from '../../assets/IconTrash.png';
 import { useNavigate } from 'react-router-dom';
@@ -64,7 +63,6 @@ function GerenciarUsuarios() {
 
   return (
     <div>
-      <Header cadastro={true} />
       <DivModal>
         <ConfirmModal
           isModalOpen={isModalOpen}

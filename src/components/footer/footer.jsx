@@ -7,7 +7,12 @@ import {
 } from "./styleFooter";
 
 import LogoCadastro from "../../assets/logoFooter.png";
+import { useLocation } from "react-router-dom";
+
 export default function FooterPrincipal() {
+  const rota = useLocation().pathname;
+  if (rota == "/login" || rota == "/cadastro") return;
+
   return (
     <Footer>
       <DivFooterContent>

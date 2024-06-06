@@ -1,5 +1,4 @@
 import Carrossel from "./Carrossel";
-import Header from "../../components/header/header";
 import { ButtonModal } from "../../components/commom/ButtonModal";
 import {
   Container,
@@ -19,7 +18,6 @@ import {
 import { FaTrashAlt } from "react-icons/fa";
 import { useQueryClient } from "@tanstack/react-query";
 import useAuthStore from "../../Stores/auth";
-import FooterPrincipal from "../../components/footer/footer";
 import Modal from "../../components/modals/modal";
 
 function Home() {
@@ -48,7 +46,6 @@ function Home() {
   };
   return (
     <DivContainer>
-      <Header />
       <DivModal>
         <Modal
           isModalOpen={isModalOpen}
@@ -69,7 +66,6 @@ function Home() {
           </Line>
         ))}
       </Container>
-      <FooterPrincipal />
     </DivContainer>
   );
 }
