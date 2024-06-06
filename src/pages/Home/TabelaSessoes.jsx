@@ -19,6 +19,7 @@ import {
   useGetSessoes,
   //usePostSessoes,
 } from '../../hooks/query/Sessoes';
+import { useState, useEffect } from 'react';
 
 function TabelaSessoes() {
   const queryClient = useQueryClient();
@@ -44,9 +45,8 @@ function TabelaSessoes() {
     return agora;
   }
 
-  setInterval(updateAgora, 1000);
-
   const calculaHora = (horaSubtraida) => {
+    setInterval(updateAgora, 1000);
     const subtracao = updateAgora().getTime() - horaSubtraida.getTime();
     const tempo = new Date(subtracao);
     console.log(tempo);
@@ -56,7 +56,27 @@ function TabelaSessoes() {
     `;
   };
 
-  setInterval(calculaHora, 1000);
+  const [tempos, setTempos] = useState({});
+  useEffect(() => {
+    const atualizarTempos = () => {
+      if (sessoes) {
+        const novosTempos = {};
+        sessoes.forEach((sessao) => {
+          novosTempos[sessao.id_usuario._id] = calculaHora(
+            new Date(sessao.createdAt),
+          );
+        });
+        setTempos(novosTempos);
+      }
+    };
+
+    atualizarTempos();
+
+    const intervalId = setInterval(atualizarTempos, 1000);
+
+    return () => clearInterval(intervalId);
+  }, [sessoes]);
+
   return (
     <Div>
       <Conteiner>
@@ -83,7 +103,7 @@ function TabelaSessoes() {
               '0',
             )}
             `}</Tempo>
-            <Tempo>{calculaHora(new Date(sessao.createdAt))}</Tempo>
+            <Tempo>{tempos[sessao.id_usuario._id]}</Tempo>
             <Botao onClick={() => deleteSessoes(sessao?.id_usuario?._id)}>
               <TbLogout size={20} color="white"></TbLogout>
             </Botao>
