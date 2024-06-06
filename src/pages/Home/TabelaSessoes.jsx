@@ -4,7 +4,12 @@ import {
   ItensLista,
   LinhaSessoes,
   Botao,
-  DivPrin,
+  ConteinerMembro,
+  ConteinerNomProj,
+  Nome,
+  Projeto,
+  Cargo,
+  Div,
 } from './styleTabelaSessoes.js';
 import { TbLogout } from 'react-icons/tb';
 import { useQueryClient } from '@tanstack/react-query';
@@ -34,28 +39,32 @@ function TabelaSessoes() {
   });
 
   return (
-    <div>
-      <DivPrin>
-        <Conteiner>
-          <LinhaPrinc>
-            <ItensLista>MEMBRO</ItensLista>
-            <ItensLista></ItensLista>
-            <ItensLista>TEMPO</ItensLista>
-            <ItensLista></ItensLista>
-          </LinhaPrinc>
-          {sessoes?.map((sessao, index) => (
-            <LinhaSessoes key={index}>
-              <ItensLista>{sessao?.id_usuario?.nome}</ItensLista>
-              <ItensLista>{sessao?.timestamps?.createdAt}</ItensLista>
-              <ItensLista>{sessao?.timestamps?.now}</ItensLista>
-              <Botao onClick={() => deleteSessoes(sessao?.id_usuario?._id)}>
-                <TbLogout size={20} color="white"></TbLogout>
-              </Botao>
-            </LinhaSessoes>
-          ))}
-        </Conteiner>
-      </DivPrin>
-    </div>
+    <Div>
+      <Conteiner>
+        <LinhaPrinc>
+          <ItensLista>MEMBRO</ItensLista>
+          <ItensLista></ItensLista>
+          <ItensLista>TEMPO</ItensLista>
+          <ItensLista></ItensLista>
+        </LinhaPrinc>
+        {sessoes?.map((sessao, index) => (
+          <LinhaSessoes key={index}>
+            <ConteinerMembro>
+              <ConteinerNomProj>
+                <Nome>{sessao?.id_usuario?.nome}</Nome>
+                <Projeto>Projeto</Projeto>
+              </ConteinerNomProj>
+              <Cargo>{sessao?.id_usuario?.cargo}</Cargo>
+            </ConteinerMembro>
+            <ItensLista>{sessao?.timestamps?.createdAt}</ItensLista>
+            <ItensLista>{sessao?.id_usuario?.nome}</ItensLista>
+            <Botao onClick={() => deleteSessoes(sessao?.id_usuario?._id)}>
+              <TbLogout size={20} color="white"></TbLogout>
+            </Botao>
+          </LinhaSessoes>
+        ))}
+      </Conteiner>
+    </Div>
   );
 }
 

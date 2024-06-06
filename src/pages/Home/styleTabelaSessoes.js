@@ -3,13 +3,14 @@ import { styled } from 'styled-components';
 export const Conteiner = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100vh;
+  width: 50%;
   align-items: center;
   justify-content: center;
   color: white;
   background-color: #222;
-  border: transparent solid;
-  border-radius: 20px;
+  margin: 40px 0 150px 0;
+  border-radius: 10px;
+  overflow: hidden;
 `;
 
 export const LinhaPrinc = styled.div`
@@ -19,6 +20,7 @@ export const LinhaPrinc = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #ffe712;
+  margin: 0 0 10px 0;
 `;
 
 export const ItensLista = styled.div`
@@ -53,12 +55,52 @@ export const Botao = styled.button`
   transition: transform 0.5s;
 `;
 
-export const DivPrin = styled.div`
-  height: 100%;
+export const ConteinerMembro = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  width: 100%;
+  align-items: left;
+  justify-content: left;
+  background-color: #222;
+  padding: 10px 0;
+`;
+
+export const ConteinerNomProj = styled.div`
+  display: flex;
+  width: 100%;
   align-items: center;
-  background: #111;
-  margin: 40px 0 150px 0;
+  justify-content: left;
+  background-color: #222;
+  padding: 0 0 5px 0;
+`;
+
+export const Nome = styled.div`
+  font-size: 12;
+  color: White;
+  text-align: right;
+  padding: 0 0 0 10%;
+  font-weight: bold;
+  font-family: 'Arial';
+`;
+
+export const Projeto = styled.div`
+  font-size: 12;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: left;
+  padding: 0 0 0 10%;
+  font-family: 'Arial';
+`;
+
+export const Cargo = styled.div`
+  font-size: 12;
+  color: #ffe712;
+  text-align: left;
+  padding: 0 0 0 10%;
+  font-family: 'Arial';
+`;
+export const Div = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
