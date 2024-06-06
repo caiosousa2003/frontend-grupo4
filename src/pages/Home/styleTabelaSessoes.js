@@ -104,3 +104,18 @@ export const Div = styled.div`
   align-items: center;
   justify-content: center;
 `;
+
+export const Tempo = styled.a`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
+  border: 2px solid #ffe712;
+  border-radius: 4px;
+  color: #ffe712;
+  margin: auto;
+  padding: 3px 7px;
+  font-weight: bold;
+  font-family: 'Arial';
+`;

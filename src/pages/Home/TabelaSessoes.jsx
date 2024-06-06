@@ -10,6 +10,7 @@ import {
   Projeto,
   Cargo,
   Div,
+  Tempo,
 } from './styleTabelaSessoes.js';
 import { TbLogout } from 'react-icons/tb';
 import { useQueryClient } from '@tanstack/react-query';
@@ -56,8 +57,15 @@ function TabelaSessoes() {
               </ConteinerNomProj>
               <Cargo>{sessao?.id_usuario?.cargo}</Cargo>
             </ConteinerMembro>
-            <ItensLista>{sessao?.timestamps?.createdAt}</ItensLista>
-            <ItensLista>{sessao?.id_usuario?.nome}</ItensLista>
+            <Tempo>{`${String(new Date(sessao.createdAt).getHours()).padStart(
+              2,
+              '0',
+            )}:${String(new Date(sessao.createdAt).getMinutes()).padStart(
+              2,
+              '0',
+            )}
+            `}</Tempo>
+            <Tempo></Tempo>
             <Botao onClick={() => deleteSessoes(sessao?.id_usuario?._id)}>
               <TbLogout size={20} color="white"></TbLogout>
             </Botao>
