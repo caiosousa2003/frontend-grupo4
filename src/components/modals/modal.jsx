@@ -44,6 +44,7 @@ export default function Modal({ isModalOpen, setIsModalOpen }) {
     },
     onError: (err) => {
       console.log(err);
+      alert(err.response.data.message);
     },
   });
   const onSubmit = (data) => {
