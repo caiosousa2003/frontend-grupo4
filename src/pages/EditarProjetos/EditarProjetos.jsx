@@ -8,16 +8,16 @@ import {
   InputDescricao,
   ContainerForm,
   Alert,
-} from './styleEditarProjetos';
-import Header from '../../components/header/header';
-import { InputDefault } from '../../components/commom/InputDefault';
-import { ButtonDefaultBlack } from '../../components/commom/ButtonDefaultBlack';
-import { useForm } from 'react-hook-form';
-import { useLocation, useNavigate } from 'react-router-dom';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useQueryClient } from '@tanstack/react-query';
-import { useUpdateProjetos } from '../../hooks/query/Projetos';
-import { validador } from './utils';
+} from "./styleEditarProjetos";
+import Header from "../../components/header/header";
+import { InputDefault } from "../../components/commom/InputDefault";
+import { ButtonDefaultBlack } from "../../components/commom/ButtonDefaultBlack";
+import { useForm } from "react-hook-form";
+import { useLocation, useNavigate } from "react-router-dom";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useQueryClient } from "@tanstack/react-query";
+import { useUpdateProjetos } from "../../hooks/query/Projetos";
+import { validador } from "./utils";
 
 function EditarProjetos() {
   const {
@@ -35,46 +35,45 @@ function EditarProjetos() {
   const { mutate: updateProjeto } = useUpdateProjetos({
     onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey: ['projetos'],
+        queryKey: ["projetos"],
       });
-      alert('Projeto alterado com sucesso!');
-      navigate('/gerenciar-projetos');
+      alert("Projeto alterado com sucesso!");
+      navigate("/gerenciar-projetos");
     },
     onError: (err) => {
-      alert('ERRO');
+      alert("ERRO");
       alert(err.response.data.message);
     },
   });
 
   const onSubmit = (data) => {
     const filledData = Object.keys(data)
-      .filter((key) => data[key] !== '')
+      .filter((key) => data[key] !== "")
       .reduce((obj, key) => {
         obj[key] = data[key];
         return obj;
       }, {});
 
     if (Object.keys(filledData).length === 0) {
-      alert('Projeto não foi alterado!');
+      alert("Projeto não foi alterado!");
     } else {
       updateProjeto({ id, body: filledData });
     }
   };
 
   const onCancel = () => {
-    navigate('/gerenciar-projetos');
+    navigate("/gerenciar-projetos");
   };
 
   return (
     <div>
-      <Header cadastro={false} />
       <ContainerPrincipal>
         <Titulo>Editar projeto</Titulo>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <ContainerForm>
             <Campo>
               <Label htmlFor="nome" margin="50px">
-                Nome:{' '}
+                Nome:{" "}
               </Label>
               <InputDefault
                 width="75%"
@@ -83,7 +82,7 @@ function EditarProjetos() {
                 name="nome"
                 error={errors}
                 borda={!!errors?.nome?.message}
-                {...register('nome')}
+                {...register("nome")}
               ></InputDefault>
             </Campo>
             {!!errors?.nome?.message && <Alert>{errors?.nome?.message}</Alert>}
@@ -95,7 +94,7 @@ function EditarProjetos() {
                 name="descricao"
                 error={errors}
                 borda={!!errors?.descricao?.message}
-                {...register('descricao')}
+                {...register("descricao")}
               ></InputDescricao>
             </Campo>
             {!!errors?.descricao?.message && (
@@ -103,7 +102,7 @@ function EditarProjetos() {
             )}
             <Campo>
               <Label htmlFor="equipe" margin="40px">
-                Equipe:{' '}
+                Equipe:{" "}
               </Label>
               <InputDefault
                 width="75%"
@@ -112,7 +111,7 @@ function EditarProjetos() {
                 name="equipe"
                 error={errors}
                 borda={!!errors?.equipe?.message}
-                {...register('equipe')}
+                {...register("equipe")}
               ></InputDefault>
             </Campo>
             {!!errors?.equipe?.message && (
