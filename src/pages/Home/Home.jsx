@@ -9,6 +9,7 @@ import {
   //   Nome,
   //   Email,
   DivContainer,
+  DivModalConfirm,
 } from './styleHome';
 import { useState } from 'react';
 //import {
@@ -19,6 +20,7 @@ import { useState } from 'react';
 //import { useQueryClient } from '@tanstack/react-query';
 //import useAuthStore from '../../Stores/auth';
 import Modal from '../../components/modals/modal';
+import ConfirmModal from '../../components/modals/confirmModal';
 
 function Home() {
   // const { data: sessoes } = useGetSessoes({
@@ -42,6 +44,26 @@ function Home() {
   const showModal = () => {
     setIsModalOpen(true);
   };
+
+  const [isModalConfirmOpen, setIsModalConfirmOpen] = useState(false);
+  const [id, setId] = useState();
+
+  const showModalConfirm = (id_sessao) => {
+    setId(id_sessao);
+    setIsModalConfirmOpen(true);
+  };
+
+  const confirmDelete = () => {
+    deleteSessoes(id);
+    setId(null);
+    setIsModalConfirmOpen(false);
+  };
+
+  const cancelDelete = () => {
+    setId(null);
+    setIsModalConfirmOpen(false);
+  };
+
   return (
     <DivContainer>
       <DivModal>
@@ -51,6 +73,14 @@ function Home() {
         ></Modal>
         <ButtonModal onClick={() => showModal()}>Fazer login</ButtonModal>
       </DivModal>
+      <DivModalConfirm>
+        <ConfirmModal
+          isModalOpen={isModalConfirmOpen}
+          cancel={cancelDelete}
+          confirmDelete={confirmDelete}
+          item="sessão"
+        ></ConfirmModal>
+      </DivModalConfirm>
       <Carrossel />
       {/* <Container>
         {sessoes?.map((sessao, index) => (
@@ -59,7 +89,7 @@ function Home() {
             <Nome>{sessao?.id_usuario?.nome}</Nome>
             <Email>{sessao?.id_usuario?.email}</Email>
             <FaTrashAlt
-              onClick={() => deleteSessoes(sessao?.id_usuario?._id)}
+              onClick={() => showModalConfirm(sessao?.id_usuario?._id)}
             />
           </Line>
         ))}

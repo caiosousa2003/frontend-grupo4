@@ -36,6 +36,13 @@ export const BodyModal = styled.div`
   color: white;
 `;
 
+export const DivModalConfirm = styled.div`
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const FooterModal = styled.div``;
 export const Cargo = styled.div``;
 export const Nome = styled.div``;
