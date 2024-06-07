@@ -1,18 +1,20 @@
-import { styled } from "styled-components";
+import { styled } from 'styled-components';
 
 export const ButtonModal = styled.button`
-  border: 1px solid #262626;
-  border-radius: 4px;
+  border: 2px solid yellow;
+  border-radius: 7px;
   background: transparent;
   padding: 4px 15px;
-  font-weight: 400;
+  font-weight: 300;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
-  color: hsla(0, 0%, 100%, 0.85);
+  color: #ffe712;
   font-size: 16px;
   height: 32px;
 
   &:hover {
-    border: 1px solid yellow;
+    font-weight: 400;
     color: yellow;
+    transform: scale(1.05);
+    cursor: pointer;
   }
 `;

@@ -1,4 +1,5 @@
-import { styled } from "styled-components";
+import { styled } from 'styled-components';
+import { colors } from '../../styles/sytlesVariables';
 
 export const TituloEditar = styled.h1`
   color: #ffe712;
@@ -33,24 +34,27 @@ export const DivTlt = styled.div`
   justify-content: center;
   width: 100%;
 `;
-export const QuadradoCinza = styled.div``;
-
-export const Form = styled.form`
+export const QuadradoCinza = styled.div`
   background-color: #313131;
-  width: 720px;
-  padding: 10px 15px;
+  width: 800px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 10px;
-  justify-content: center;
-  @media (max-width: 900px) {
-    width: 80%;
+  padding: 0px 0px 20px 0px;
+  @media screen and (max-width: 800px) {
+    width: 90vw;
   }
 `;
 
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 export const TextoPadrao = styled.p`
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #ffe712;
   margin-bottom: 10px;
   padding: 5px;
@@ -85,4 +89,15 @@ export const DivPrincipal = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
+`;
+
+export const Alert = styled.p`
+  color: ${colors.font.secondary};
+  text-transform: uppercase;
+  text-decoration: solid;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  text-align: left;
+  width: 43%;
 `;

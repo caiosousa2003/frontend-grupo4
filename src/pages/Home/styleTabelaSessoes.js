@@ -8,9 +8,12 @@ export const Conteiner = styled.div`
   justify-content: center;
   color: white;
   background-color: #222;
-  margin: 40px 0 150px 0;
+  margin: 15px 0 150px 0;
   border-radius: 10px;
   overflow: hidden;
+  @media (max-width: 1150px) {
+    width: 80%;
+  }
 `;
 
 export const LinhaPrinc = styled.div`
@@ -30,6 +33,15 @@ export const ItensLista = styled.div`
   padding: 10px 0px;
   font-weight: bold;
   font-family: 'Arial';
+  @media (max-width: 1150px) {
+    font-size: 14;
+  }
+  @media (max-width: 800px) {
+    font-size: 11;
+  }
+  @media (max-width: 500px) {
+    font-size: 8;
+  }
 `;
 
 export const LinhaSessoes = styled.div`
@@ -81,14 +93,33 @@ export const Nome = styled.div`
   padding: 0 0 0 10%;
   font-weight: bold;
   font-family: 'Arial';
+  @media (max-width: 1150px) {
+    font-size: 10;
+  }
+  @media (max-width: 800px) {
+    font-size: 8;
+    font-weight: bold;
+  }
+  @media (max-width: 500px) {
+    font-size: 6;
+  }
 `;
 
 export const Projeto = styled.div`
   font-size: 12;
   color: rgba(255, 255, 255, 0.4);
   text-align: left;
-  padding: 0 0 0 10%;
+  padding: 0 0 0 5%;
   font-family: 'Arial';
+  @media (max-width: 1150px) {
+    font-size: 10;
+  }
+  @media (max-width: 800px) {
+    font-size: 8;
+  }
+  @media (max-width: 600px) {
+    font-size: 4;
+  }
 `;
 
 export const Cargo = styled.div`
@@ -97,6 +128,15 @@ export const Cargo = styled.div`
   text-align: left;
   padding: 0 0 0 10%;
   font-family: 'Arial';
+  @media (max-width: 1150px) {
+    font-size: 10;
+  }
+  @media (max-width: 800px) {
+    font-size: 8;
+  }
+  @media (max-width: 600px) {
+    font-size: 4;
+  }
 `;
 export const Div = styled.div`
   display: flex;
@@ -118,4 +158,13 @@ export const Tempo = styled.a`
   padding: 3px 7px;
   font-weight: bold;
   font-family: 'Arial';
+  @media (max-width: 1150px) {
+    font-size: 10;
+  }
+  @media (max-width: 800px) {
+    font-size: 8;
+  }
+  @media (max-width: 600px) {
+    font-size: 4;
+  }
 `;

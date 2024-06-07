@@ -5,6 +5,8 @@ import {
   Form,
   Botao,
   DivPrincipal,
+  QuadradoCinza,
+  Alert,
 } from './styleEditarUsuario';
 import { InputDefault } from '../../components/commom/InputDefault';
 import { ButtonDefaultBlack } from '../../components/commom/ButtonDefaultBlack';
@@ -58,29 +60,33 @@ function EditarUsuario() {
       <DivPrincipal>
         <TituloEditar>EDITAR USUÁRIO</TituloEditar>
         <Form onSubmit={handleSubmit(onSubmit)}>
-          <ContainerPadrao>
-            <TextoPadrao>Nome:</TextoPadrao>
-            <InputDefault
-              error={errors}
-              borda={!!errors?.descricao?.message}
-              {...register('nome')}
-            ></InputDefault>
-          </ContainerPadrao>
-          <ContainerPadrao>
-            <TextoPadrao>Cargo:</TextoPadrao>
-            <InputDefault
-              error={errors}
-              borda={!!errors?.descricao?.message}
-              {...register('cargo')}
-            ></InputDefault>
-          </ContainerPadrao>
+          <QuadradoCinza>
+            <ContainerPadrao>
+              <TextoPadrao>Nome:</TextoPadrao>
+              <InputDefault
+                error={errors}
+                borda={!!errors?.nome?.message}
+                {...register('nome')}
+              ></InputDefault>
+            </ContainerPadrao>
+            {!!errors?.nome?.message && <Alert>{errors?.nome?.message}</Alert>}
+            <ContainerPadrao>
+              <TextoPadrao>Cargo:</TextoPadrao>
+              <InputDefault
+                error={errors}
+                borda={!!errors?.cargo?.message}
+                {...register('cargo')}
+              ></InputDefault>
+            </ContainerPadrao>
+            {!!errors?.nome?.message && <Alert>{errors?.cargo?.message}</Alert>}
+          </QuadradoCinza>
           <Botao>
+            <ButtonDefaultBlack onClick={() => navigate('/gerenciar-usuarios')}>
+              CANCELAR
+            </ButtonDefaultBlack>
             <ButtonDefaultBlack>SALVAR</ButtonDefaultBlack>
           </Botao>
         </Form>
-        <ButtonDefaultBlack onClick={() => navigate('/gerenciar-usuarios')}>
-          CANCELAR
-        </ButtonDefaultBlack>
       </DivPrincipal>
     </div>
   );

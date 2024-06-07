@@ -1,11 +1,9 @@
 import Carrossel from './Carrossel';
 import TabelaSessoes from './TabelaSessoes';
 import { ButtonModal } from '../../components/commom/ButtonModal';
-import {
-  DivModal,
-  DivContainer,
-} from './styleHome';
+import { DivModal, DivContainer, ConteinerLogin, Div } from './styleHome';
 import { useState } from 'react';
+
 import Modal from '../../components/modals/modal';
 
 function Home() {
@@ -16,14 +14,18 @@ function Home() {
 
   return (
     <DivContainer>
-      <DivModal>
-        <Modal
-          isModalOpen={isModalOpen}
-          setIsModalOpen={setIsModalOpen}
-        ></Modal>
-      </DivModal>
       <Carrossel />
-      <ButtonModal onClick={() => showModal()}>Fazer login</ButtonModal>
+      <ConteinerLogin>
+        <Div>
+          <DivModal>
+            <Modal
+              isModalOpen={isModalOpen}
+              setIsModalOpen={setIsModalOpen}
+            ></Modal>
+            <ButtonModal onClick={() => showModal()}>Fazer login</ButtonModal>
+          </DivModal>
+        </Div>
+      </ConteinerLogin>
       <TabelaSessoes></TabelaSessoes>
     </DivContainer>
   );
