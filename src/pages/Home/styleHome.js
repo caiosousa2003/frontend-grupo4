@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+
 export const DivContainer = styled.div`
   background-color: #111;
   height: 100vh;
@@ -6,7 +7,6 @@ export const DivContainer = styled.div`
 
 export const DivModal = styled.div`
   background-color: #111;
-<<<<<<< HEAD
 `;
 export const DivForm = styled.div`
   background-color: #111;
@@ -47,6 +47,3 @@ export const FooterModal = styled.div``;
 export const Cargo = styled.div``;
 export const Nome = styled.div``;
 export const Email = styled.div``;
-=======
-`;
->>>>>>> origin/main
