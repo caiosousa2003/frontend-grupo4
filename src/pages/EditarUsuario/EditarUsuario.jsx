@@ -5,6 +5,7 @@ import {
   Form,
   Botao,
   DivPrincipal,
+  QuadradoCinza,
 } from './styleEditarUsuario';
 import { InputDefault } from '../../components/commom/InputDefault';
 import { ButtonDefaultBlack } from '../../components/commom/ButtonDefaultBlack';
@@ -58,29 +59,32 @@ function EditarUsuario() {
       <DivPrincipal>
         <TituloEditar>EDITAR USUÁRIO</TituloEditar>
         <Form onSubmit={handleSubmit(onSubmit)}>
-          <ContainerPadrao>
-            <TextoPadrao>Nome:</TextoPadrao>
-            <InputDefault
-              error={errors}
-              borda={!!errors?.descricao?.message}
-              {...register('nome')}
-            ></InputDefault>
-          </ContainerPadrao>
-          <ContainerPadrao>
-            <TextoPadrao>Cargo:</TextoPadrao>
-            <InputDefault
-              error={errors}
-              borda={!!errors?.descricao?.message}
-              {...register('cargo')}
-            ></InputDefault>
-          </ContainerPadrao>
+          <QuadradoCinza>
+            <ContainerPadrao>
+              <TextoPadrao>Nome:</TextoPadrao>
+              <InputDefault
+                error={errors}
+                borda={!!errors?.descricao?.message}
+                {...register('nome')}
+              ></InputDefault>
+            </ContainerPadrao>
+            <ContainerPadrao>
+              <TextoPadrao>Cargo:</TextoPadrao>
+              <InputDefault
+                error={errors}
+                borda={!!errors?.descricao?.message}
+                {...register('cargo')}
+              ></InputDefault>
+            </ContainerPadrao>
+          </QuadradoCinza>
           <Botao>
             <ButtonDefaultBlack>SALVAR</ButtonDefaultBlack>
+
+            <ButtonDefaultBlack onClick={() => navigate('/gerenciar-usuarios')}>
+              CANCELAR
+            </ButtonDefaultBlack>
           </Botao>
         </Form>
-        <ButtonDefaultBlack onClick={() => navigate('/gerenciar-usuarios')}>
-          CANCELAR
-        </ButtonDefaultBlack>
       </DivPrincipal>
     </div>
   );
