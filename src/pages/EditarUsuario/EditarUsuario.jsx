@@ -6,6 +6,7 @@ import {
   Botao,
   DivPrincipal,
   QuadradoCinza,
+  Alert,
 } from './styleEditarUsuario';
 import { InputDefault } from '../../components/commom/InputDefault';
 import { ButtonDefaultBlack } from '../../components/commom/ButtonDefaultBlack';
@@ -64,25 +65,26 @@ function EditarUsuario() {
               <TextoPadrao>Nome:</TextoPadrao>
               <InputDefault
                 error={errors}
-                borda={!!errors?.descricao?.message}
+                borda={!!errors?.nome?.message}
                 {...register('nome')}
               ></InputDefault>
             </ContainerPadrao>
+            {!!errors?.nome?.message && <Alert>{errors?.nome?.message}</Alert>}
             <ContainerPadrao>
               <TextoPadrao>Cargo:</TextoPadrao>
               <InputDefault
                 error={errors}
-                borda={!!errors?.descricao?.message}
+                borda={!!errors?.cargo?.message}
                 {...register('cargo')}
               ></InputDefault>
             </ContainerPadrao>
+            {!!errors?.nome?.message && <Alert>{errors?.cargo?.message}</Alert>}
           </QuadradoCinza>
           <Botao>
-            <ButtonDefaultBlack>SALVAR</ButtonDefaultBlack>
-
             <ButtonDefaultBlack onClick={() => navigate('/gerenciar-usuarios')}>
               CANCELAR
             </ButtonDefaultBlack>
+            <ButtonDefaultBlack>SALVAR</ButtonDefaultBlack>
           </Botao>
         </Form>
       </DivPrincipal>

@@ -1,5 +1,5 @@
-import { styled } from "styled-components";
-import { colors } from "../../styles/sytlesVariables";
+import { styled } from 'styled-components';
+import { colors } from '../../styles/sytlesVariables';
 
 export const ContainerPrincipal = styled.div`
   display: flex;
@@ -54,7 +54,7 @@ export const Label = styled.label`
   font-size: 24px;
   font-weight: bold;
   margin-top: 40px;
-  margin-right: ${(props) => props.margin || "15px"};
+  margin-right: ${(props) => props.margin || '15px'};
   @media screen and (max-width: 400px) {
     font-size: 16px;
   }
@@ -67,13 +67,13 @@ export const ContainerButtons = styled.div`
 
 export const InputDescricao = styled.textarea`
   border-radius: 20px;
-  margin-top: ${(props) => props.margintop || "35px"};
+  margin-top: ${(props) => props.margintop || '35px'};
   padding-left: 15px;
   box-sizing: border-box;
   resize: none;
-  width: ${(props) => props.width || "44%"};
-  height: ${(props) => props.height || "50px"};
-  font-size: ${(props) => props.font || "20px"};
+  width: ${(props) => props.width || '44%'};
+  height: ${(props) => props.height || '50px'};
+  font-size: ${(props) => props.font || '20px'};
   @media screen and (max-width: 800px) {
   }
   @media screen and (max-width: 500px) {
