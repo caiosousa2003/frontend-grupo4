@@ -7,19 +7,19 @@ export const LogoCPE = styled.img`
 
 export const ContainerHeader = styled.header`
   background-color: yellow;
-  height: 15vh;
+  height: 83px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   @media screen and (max-width: 600px) {
-    height: 12vh;
+    height: 67px;
   }
-  @media screen and (max-width: 480px) {
-    height: 10vh;
+  @media screen and (max-width: 490px) {
+    height: 56px;
   }
   @media screen and (max-width: 400px) {
-    height: 8vh;
+    height: 44px;
   }
 `;
 
