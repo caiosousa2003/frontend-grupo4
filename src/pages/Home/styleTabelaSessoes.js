@@ -8,7 +8,7 @@ export const Conteiner = styled.div`
   justify-content: center;
   color: white;
   background-color: #222;
-  margin: 40px 0 150px 0;
+  margin: 15px 0 150px 0;
   border-radius: 10px;
   overflow: hidden;
   @media (max-width: 1150px) {
@@ -143,15 +143,6 @@ export const Div = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  @media (max-width: 1150px) {
-    font-size: 10;
-  }
-  @media (max-width: 800px) {
-    font-size: 8;
-  }
-  @media (max-width: 600px) {
-    font-size: 4;
-  }
 `;
 
 export const Tempo = styled.a`
@@ -168,12 +159,12 @@ export const Tempo = styled.a`
   font-weight: bold;
   font-family: 'Arial';
   @media (max-width: 1150px) {
-    font-size: 14;
+    font-size: 10;
   }
   @media (max-width: 800px) {
-    font-size: 11;
-  }
-  @media (max-width: 500px) {
     font-size: 8;
+  }
+  @media (max-width: 600px) {
+    font-size: 4;
   }
 `;

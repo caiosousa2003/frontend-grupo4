@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled } from 'styled-components';
 export const DivContainer = styled.div`
   background-color: #111;
   height: 100vh;
@@ -43,6 +43,21 @@ export const DivModalConfirm = styled.div`
   align-items: center;
 `;
 
+export const ConteinerLogin = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Div = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: end;
+  }
+`;
 export const FooterModal = styled.div``;
 export const Cargo = styled.div``;
 export const Nome = styled.div``;

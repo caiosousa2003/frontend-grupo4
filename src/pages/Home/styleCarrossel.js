@@ -7,6 +7,7 @@ export const DivPrin = styled.div`
   justify-content: center;
   align-items: center;
   background: #111;
+  padding-top: 2%;
 `;
 
 export const DivConteiner = styled.div`
