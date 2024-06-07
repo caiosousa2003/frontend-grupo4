@@ -32,6 +32,7 @@ function EditarUsuario() {
         queryKey: ['usuarios'],
       });
       alert('Usuário editado com sucesso!');
+      navigate('/gerenciar-usuarios');
     },
     onError: (err) => {
       alert(err.response.data.message);

@@ -39,10 +39,7 @@ export async function deleteUsuarios(id) {
 }
 
 export async function updateUsuario(data) {
-  const { data1 } = await api.put(`/usuarios/${data.id}`, {
-    nome: data.nome,
-    cargo: data.cargo,
-  });
+  const { data1 } = await api.put(`/usuarios/${data.id}`, data.body);
   return data1;
 }
 

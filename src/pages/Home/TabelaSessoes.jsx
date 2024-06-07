@@ -49,7 +49,6 @@ function TabelaSessoes() {
     setInterval(updateAgora, 1000);
     const subtracao = updateAgora().getTime() - horaSubtraida.getTime();
     const tempo = new Date(subtracao);
-    console.log(tempo);
     return `${String(tempo.getUTCHours()).padStart(2, '0')}:${String(
       tempo.getMinutes(),
     ).padStart(2, '0')}
