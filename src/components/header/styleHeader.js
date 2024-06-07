@@ -8,10 +8,11 @@ export const LogoCPE = styled.img`
 export const ContainerHeader = styled.header`
   background-color: yellow;
   height: 15vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media screen and (max-width: 564px) {
+  @media screen and (max-width: 600px) {
     height: 12vh;
   }
   @media screen and (max-width: 480px) {

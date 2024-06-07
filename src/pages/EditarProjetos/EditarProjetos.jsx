@@ -1,5 +1,4 @@
 import { Campo, ContainerButtons, ContainerPrincipal, Form, Titulo, Label, InputDescricao, ContainerForm, Alert } from "./styleEditarProjetos";
-import Header from "../../components/header/header";
 import { InputDefault } from "../../components/commom/InputDefault";
 import { ButtonDefaultBlack } from "../../components/commom/ButtonDefaultBlack";
 import { useForm } from "react-hook-form";
@@ -53,7 +52,6 @@ function EditarProjetos() {
 
 return (
     <div>
-    <Header cadastro={false} />
     <ContainerPrincipal>
         <Titulo>Editar projeto</Titulo>
         <Form onSubmit={handleSubmit(onSubmit)}>

@@ -1,5 +1,4 @@
 import Carrossel from './Carrossel';
-import Header from '../../components/header/header';
 import TabelaSessoes from './TabelaSessoes';
 import { ButtonModal } from '../../components/commom/ButtonModal';
 import {
@@ -19,7 +18,6 @@ import { useState } from 'react';
 //} from '../../hooks/query/Sessoes';
 //import { useQueryClient } from '@tanstack/react-query';
 //import useAuthStore from '../../Stores/auth';
-import FooterPrincipal from '../../components/footer/footer';
 import Modal from '../../components/modals/modal';
 
 function Home() {
@@ -46,7 +44,6 @@ function Home() {
   };
   return (
     <DivContainer>
-      <Header />
       <DivModal>
         <Modal
           isModalOpen={isModalOpen}
@@ -68,7 +65,6 @@ function Home() {
         ))}
       </Container> */}
       <TabelaSessoes></TabelaSessoes>
-      <FooterPrincipal />
     </DivContainer>
   );
 }

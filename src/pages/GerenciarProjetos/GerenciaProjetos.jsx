@@ -1,5 +1,4 @@
 import { Campo, ContainerPrincipal, Form, Titulo, Label, InputDescricao, ContainerForm, ContainerList, Item, Icon, ContainerLine, Alert, DivModal, DivIcons } from "./styleGerenciarProjetos";
-import Header from "../../components/header/header";
 import { InputDefault } from "../../components/commom/InputDefault";
 import { ButtonDefaultBlack } from "../../components/commom/ButtonDefaultBlack";
 import IconEdit from '../../assets/IconEdit.png';
@@ -83,7 +82,6 @@ function GerenciarProjetos() {
 
 return (
     <div>
-    <Header cadastro={true} />
     <DivModal>
         <ConfirmModal
           isModalOpen={isModalOpen}

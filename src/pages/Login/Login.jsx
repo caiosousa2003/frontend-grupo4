@@ -1,4 +1,3 @@
-import Header from "../../components/header/header";
 import { ButtonDefault } from "../../components/commom/ButtonDefault";
 import { InputDefault } from "../../components/commom/InputDefault";
 import { Titulo, DivPrincipal, TextCadastro, TextClicavel, Form, Alert } from "./styleLogin";
@@ -44,7 +43,6 @@ function Login() {
 
     return (
         <div>
-        <Header/>
         <DivPrincipal>
             <Titulo>LOGIN</Titulo>
             <Form onSubmit={handleSubmit(onSubmit)}>
